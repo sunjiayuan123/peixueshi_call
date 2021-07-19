@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="updatebar_height">62.0dip</dimen>
+    <dimen name="pull_refresh_progress_size">32dp</dimen>
+    <dimen name="updatebar_icon_space">4dp</dimen>
+
+
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/home_top_blue">
+        <ImageView android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_back_white_24dp"/>
+        <TextView android:text="详情"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/rl_title_view"
+        android:id="@+id/game_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+            <TextView android:text="项        目:"
+                android:id="@+id/tv_xiangmu"
+                android:textColor="@color/text_common_gray"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/dp_16"
+                android:layout_alignParentLeft="true"
+                android:layout_height="@dimen/dp_40"/>
+            <TextView android:text="执业药师"
+                android:layout_toRightOf="@id/tv_xiangmu"
+                android:id="@+id/tv_xiangmu_text"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:textColor="@color/text_common_balck"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/dp_16"
+                android:layout_height="@dimen/dp_40"/>
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <TextView android:text="手  机  号:"
+                    android:id="@+id/tv_phone"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/dp_40"/>
+                <TextView android:text="18613869999"
+                    android:layout_toRightOf="@id/tv_phone"
+                    android:id="@+id/tv_phone_num"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_40"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <TextView android:text="登录次数:"
+                    android:id="@+id/tv_login_count"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/dp_40"/>
+                <TextView android:text="3 次"
+                    android:layout_toRightOf="@id/tv_login_count"
+                    android:id="@+id/tv_count"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_40"/>
+
+            </RelativeLayout>
+           <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <TextView android:text="成交金额"
+                    android:id="@+id/tv_money"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/dp_40"/>
+
+                <TextView
+                    android:id="@+id/tv_money_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_toRightOf="@id/tv_money"
+                    android:gravity="center_vertical"
+                    android:text="￥1980"
+                    android:textColor="@color/text_common_gray"
+                    android:textSize="@dimen/dp_16" />
+
+            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <TextView android:text="意向程度:"
+                    android:id="@+id/tv_yixiang"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/dp_40"/>
+                <TextView android:text="C"
+                    android:layout_toRightOf="@id/tv_yixiang"
+                    android:id="@+id/tv_yixiang_text"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_40"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <TextView android:text="备        注:"
+                    android:id="@+id/tv_beizhu"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/dp_40"/>
+                <TextView android:text="现在不办理"
+                    android:layout_toRightOf="@id/tv_beizhu"
+                    android:id="@+id/tv_biezhu_text"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_40"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp">
+                <TextView android:text="创建时间:"
+                    android:id="@+id/tv_time"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/dp_40"/>
+                <TextView android:text="2020.02.03"
+                    android:layout_toRightOf="@id/tv_time"
+                    android:id="@+id/tv_creat_time"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_40"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

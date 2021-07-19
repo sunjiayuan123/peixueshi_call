@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout android:id="@+id/rl_line1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:text="项  目:"
+            android:id="@+id/tv_number"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_14"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/et_show_info"
+            android:focusable="false"
+            android:textColor="@color/text_common_gray"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textSize="@dimen/dp_16"
+            android:hint="请选择项目"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_number"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_40"/>
+    </RelativeLayout>
+
+</LinearLayout>

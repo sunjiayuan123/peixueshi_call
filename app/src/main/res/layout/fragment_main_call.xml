@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:background="@color/home_top_blue"
+        android:layout_height="@dimen/dp_40" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="50dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_top_blue"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_text2"
+            android:layout_width="@dimen/dp_54"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:maxLength="11"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/bt_delete"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:background="@mipmap/information_delete"
+            android:onClick="deleteClick"
+            android:text="del"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_call"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/one"
+                android:id="@+id/bt_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/two"
+                />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:background="@mipmap/three"
+                android:id="@+id/bt_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/bt_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/four"
+                android:scaleType="fitXY"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/five"
+               />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:background="@mipmap/six"
+                android:id="@+id/bt_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/seven"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/eight"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/nine"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/xing"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ling"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/jing"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_function"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/more"/>
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_call"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/call_out" />
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:id="@+id/bt_all"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/information_close" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

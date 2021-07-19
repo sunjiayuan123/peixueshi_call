@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_pay_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/exam_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="考试类型："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/exam_type_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_toEndOf="@+id/exam_type"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/enter_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exam_type"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="报考区域:"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/order_number_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exam_type"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toEndOf="@+id/enter_area"
+            android:text="河南省"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_xiangmu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enter_area"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="学校名称："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/xiangmu_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enter_area"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/tv_xiangmu_name"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/order_pay_leixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_xiangmu_name"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="学         历："
+            android:textColor="@color/font_333333"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/postion_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_xiangmu_name"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/order_pay_leixing"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="河南"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/order_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_pay_leixing"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="专业名称："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_pay_leixing"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/order_pay_type"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="磊"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/stu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_pay_type"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="姓         名："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/stu_name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_pay_type"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/stu_name"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="磊"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/xue_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stu_name"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="身份证号："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/xue_card_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stu_name"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/xue_card"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="磊"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/census"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xue_card"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="户         籍："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/census_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/xue_card"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/census"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="磊"
+            android:textColor="@color/btn_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/order_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/census"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="价         格："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/remove_pro"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_below="@id/census"
+            android:layout_toEndOf="@+id/order_pay_money"
+            android:textColor="@color/btn_gray"
+            android:text="¥666.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android_call_peixueshi.iml" filepath="$PROJECT_DIR$/.idea/modules/android_call_peixueshi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android_call_peixueshi.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android_call_peixueshi.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/arms/android_call_peixueshi.arms.iml" filepath="$PROJECT_DIR$/.idea/modules/arms/android_call_peixueshi.arms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/android_call_peixueshi.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/android_call_peixueshi.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-pulltorefresh/android_call_peixueshi.library-pulltorefresh.iml" filepath="$PROJECT_DIR$/.idea/modules/library-pulltorefresh/android_call_peixueshi.library-pulltorefresh.iml" />
+    </modules>
+  </component>
+</project>

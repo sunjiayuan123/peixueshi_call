@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_cancle"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:background="@drawable/cancel_bg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Crm PC 登录确认"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/dp_20"/>
+        <TextView android:id="@+id/tv_sure_login"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="@dimen/dp_35"
+            android:text="登录"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/dp_105"
+            android:background="@drawable/button_shape_login_press"/>
+        <TextView android:id="@+id/tv_cancle_login"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="@dimen/dp_35"
+            android:text="取消登录"
+            android:gravity="center"
+            android:textColor="@color/home_top_blue_login_press"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/dp_30"/>
+    </FrameLayout>
+</LinearLayout>

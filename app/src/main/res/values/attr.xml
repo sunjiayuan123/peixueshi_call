@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapeTextView">
+        <attr name="shape" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+        </attr>
+        <attr name="solidNormal" format="color" />
+        <attr name="solidPressed" format="color" />
+        <attr name="cornersRadius" format="dimension" />
+        <attr name="cornerTopLeft" format="dimension" />
+        <attr name="cornerTopRight" format="dimension" />
+        <attr name="cornerBottomLeft" format="dimension" />
+        <attr name="cornerBottomRight" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
+        <attr name="gradientNormalStartColor" format="color" />
+        <attr name="gradientNormalCenterColor" format="color" />
+        <attr name="gradientNormalEndColor" format="color" />
+
+        <attr name="gradientPressedStartColor" format="color" />
+        <attr name="gradientPressedCenterColor" format="color" />
+        <attr name="gradientPressedEndColor" format="color" />
+
+        <attr name="gradientOrientation" format="enum">
+            <enum name="TOP_BOTTOM" value="0" />
+            <enum name="TR_BL" value="1" />
+            <enum name="RIGHT_LEFT" value="2" />
+            <enum name="BR_TL" value="3" />
+            <enum name="BOTTOM_TOP" value="4" />
+            <enum name="BL_TR" value="5" />
+            <enum name="LEFT_RIGHT" value="6" />
+            <enum name="TL_BR" value="7" />
+        </attr>
+
+
+
+    </declare-styleable>
+
+    <declare-styleable name="SngCircleImageView">
+        <attr name="sng_border_color" format="color"></attr>
+        <attr name="sng_border_width" format="dimension"></attr>
+    </declare-styleable>
+
+
+    <!--corner_color 边角颜色，
+    scanner_color 扫描线颜色
+    possible_result_color 扫描点颜色
+    frame_color 扫描框边线颜色
+    mask_color 模糊区域颜色
+    label_text  框上方提示
+-->
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color"/>
+        <attr name="laser_color" format="color"/>
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color"/>
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="float"/>
+    </declare-styleable>
+</resources>

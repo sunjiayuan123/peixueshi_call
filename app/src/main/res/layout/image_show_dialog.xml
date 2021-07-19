@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_trans_corner"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <RelativeLayout android:id="@+id/rl_cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_gravity="right">
+        <ImageView android:id="@+id/iv_cancel"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/cancel_bg"/>
+    </RelativeLayout>
+
+    <TextView android:id="@+id/tv_pay_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="请选择付款方式,生成对应的二维码"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+        android:textColor="@color/text_common_balck"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <RadioGroup
+            android:id="@+id/rg_pay_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rb_zhifubao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝"
+                android:buttonTint="@color/home_top_blue"
+                android:textSize="@dimen/dp_12"  />
+
+            <RadioButton
+                android:id="@+id/rb_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/home_top_blue"
+                android:text="微信"
+                android:textSize="@dimen/dp_12" />
+            <RadioButton
+                android:visibility="gone"
+                android:id="@+id/rb_juhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="聚合"
+                android:buttonTint="@color/home_top_blue"
+                android:textSize="@dimen/dp_12"/>
+            <RadioButton android:id="@+id/rb_saobai"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫呗"
+                android:buttonTint="@color/home_top_blue"
+                android:textSize="@dimen/dp_12"/>
+        </RadioGroup>
+    </RelativeLayout>
+    <TextView android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="18613869712"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+        android:textColor="@color/text_common_balck"/>
+    <ImageView android:id="@+id/iv_show_pay"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="@dimen/dp_250"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:textColor="@color/text_common_gray"/>
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="25dp">
+
+        <TextView android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_common_gray"
+            android:text="@string/company_name"
+            />
+    </RelativeLayout>
+</LinearLayout>

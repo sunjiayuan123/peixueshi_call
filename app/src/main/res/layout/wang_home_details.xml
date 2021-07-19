@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+
+    <RelativeLayout
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/line">
+
+        <TextView
+            android:id="@+id/order_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="订单号："
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/order_mark_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_toEndOf="@+id/order_mark"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_below="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

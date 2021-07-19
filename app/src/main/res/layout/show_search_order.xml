@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/home_top_blue">
+        <ImageView android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_back_white_24dp"/>
+       <!-- <TextView android:text="修改密码"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>-->
+        <EditText android:id="@+id/et_phoe_click"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_70"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="@dimen/dp_70"
+            android:focusable="true"
+            android:background="@drawable/shape_button_trans_blue"
+            android:drawableRight="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+        <TextView android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:textSize="16dp"
+            android:text="搜索"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frame_search_order"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

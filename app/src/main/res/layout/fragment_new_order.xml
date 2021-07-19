@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--  <LinearLayout android:layout_width="match_parent"
+          android:layout_height="25dp"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:background="@color/home_top_blue"/>-->
+    <RelativeLayout
+        android:id="@+id/re_top"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44">
+
+        <TextView
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/common_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单中心" />
+
+        <ImageView
+            android:id="@+id/iv_search_order"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_weight="100"
+            android:background="@drawable/search_black" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/ed_re"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44">
+
+        <EditText android:id="@+id/et_phoe_click"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_28"
+            android:layout_marginRight="@dimen/dp_70"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_button_trans_blue"
+            android:drawableLeft="@mipmap/search_gray"
+            android:drawablePadding="5dp"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:gravity="center"
+            android:hint="请输入手机号"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:drawableRight="@mipmap/delete_gray"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textColor="@color/serach_bbbbbb"
+            android:textColorHint="@color/serach_bbbbbb"
+            android:textSize="16sp" />
+        <TextView android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:textColor="@color/home_top_blue"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:textSize="16sp"
+            android:text="取消"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:layout_below="@+id/re_top"
+        android:id="@+id/tabLayout_order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_34"
+        android:background="@color/white"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/home_top_text_blue"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/text_common_balck"
+        app:tabTextColor="@color/text_common_gray" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/tabLayout_order"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/view_gray" />
+
+    <LinearLayout
+        android:id="@+id/select_li"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/dp_58">
+
+        <TextView
+            android:id="@+id/all_order"
+            android:layout_width="@dimen/dp_68"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_15"
+            android:background="@drawable/btn_red_corner"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:text="全部" />
+
+        <TextView
+            android:id="@+id/total_payment"
+            android:layout_width="@dimen/dp_68"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/sp_20"
+            android:background="@drawable/shape_text_gray"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/btn_gray"
+            android:gravity="center"
+            android:text="全款" />
+
+        <TextView
+            android:id="@+id/earnest_payment"
+            android:layout_width="@dimen/dp_68"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/sp_20"
+            android:background="@drawable/shape_text_gray"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/btn_gray"
+            android:gravity="center"
+            android:text="定金" />
+
+        <TextView
+            android:id="@+id/balance_payment"
+            android:layout_width="@dimen/dp_68"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/sp_20"
+            android:textColor="@color/btn_gray"
+            android:background="@drawable/shape_text_gray"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center"
+            android:text="尾款" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/select_li"
+        android:id="@+id/viewpager_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

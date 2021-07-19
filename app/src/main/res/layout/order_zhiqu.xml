@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout android:id="@+id/rl_line1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:text="证书名称*"
+            android:id="@+id/tv_xiangmu"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_16"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/et_xiangmu"
+            android:textColor="@color/text_common_gray"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="@dimen/dp_16"
+            android:hint="请选择证书"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="number"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_xiangmu"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_45"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:id="@+id/tv_name"
+            android:text="姓       名*"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_16"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/et_user_name"
+            android:textColor="@color/text_common_gray"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:textSize="@dimen/dp_16"
+            android:hint="请输入学员姓名"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_name"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_45"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:id="@+id/tv_user_number"
+            android:text="身份证号*"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_16"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/et_user_number"
+            android:textColor="@color/text_common_gray"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textSize="@dimen/dp_16"
+            android:inputType="number"
+            android:hint="请输入学员身份证号"
+            android:paddingLeft="@dimen/dp_10"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:layout_toRightOf="@id/tv_user_number"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_45"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:id="@+id/tv_address"
+            android:text="户       籍*"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_16"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/et_add"
+            android:textColor="@color/text_common_gray"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textSize="@dimen/dp_16"
+            android:hint="请输入学员户籍"
+            android:paddingLeft="@dimen/dp_10"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:layout_toRightOf="@id/tv_address"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_45"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_price"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:id="@+id/tv_price"
+            android:text="学       费*"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_16"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/et_price"
+            android:textColor="@color/text_common_gray"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textSize="@dimen/dp_16"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:hint="请输入报名价格"
+            android:paddingLeft="@dimen/dp_10"
+            android:inputType="number"
+            android:layout_toRightOf="@id/tv_price"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_45"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_save"
+        android:layout_width="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="30dp"
+            android:background="@drawable/order_select_up"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+    </LinearLayout>
+</LinearLayout>

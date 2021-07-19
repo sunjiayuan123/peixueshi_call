@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line">#eeeeee</color>
+    <color name="font_333333">#333333</color>
+
+    <color name="font_6882fd">#6882fd</color>
+    <color name="font_ff3e6d">#ff3e6d</color>
+    <color name="font_999999">#999999</color>
+    <color name="font_eeeeee">#eeeeee</color>
+    <color name="green">#1ABC9C</color>
+    <color name="serach_bbbbbb">#BBBBBB</color>
+
+    <color name="xindongcolor">#FF3E70</color>
+    <color name="buttoncolor">#FF3E6D</color>
+    <color name="textcolor"> #999999</color>
+    <color name="countcolor"> #FF3E6D</color>
+    <color name="textcentercolor">#333333</color>
+    <color name="indectorcolor">#FF3E6D</color>
+    <color name="black">#000000</color>
+    <color name="font_dddddd">#dddddd</color>
+    <color name="font_f3f6f8">#f3f6f8</color>
+    <color name="font_666666">#666666</color>
+    <color name="font_line">#eeeeee</color>
+    <color name="font_f8f8f8">#f8f8f8</color>
+    <color name="admin_bg">  #A76FEE</color>
+
+    <color name="white_trans_color">#66060d35 </color>
+    <color name="login_black_trans">#ee000000</color>
+    <color name="transparent1">#33000000</color>
+    <color name="transparent">#00000000</color>
+
+<!--我的页面-->
+    <color name="line_color">#dbdbdb</color>
+    <color name="mine_color_blue">#4A8DE8</color>
+    <color name="mine_color_blue_number">#367FE3</color>
+    <color name="mine_color_text_gray">#696768</color>
+    <color name="mine_color_line_gray">#9C9A9D</color>
+    <color name="mine_color_item_gray">#696768</color>
+
+  <!--  控制台页面-->
+    <color name="home_top_blue">#337FEB</color>
+    <color name="home_project_bule">#EBF3FF</color>
+    <color name="search_tou">#68A0F0</color>
+    <color name="home_num_bule">#D4E5FE</color>
+    <color name="home_top_blue_login_press">#327fe8</color>
+    <color name="home_top_search_bg_blue">#F3F3F3</color>
+    <color name="home_top_text_blue">#2F80D9</color>
+    <color name="home_top_text_gray">#9F9C9F</color>
+    <color name="common_black">#353235</color>
+    <color name="common_gray">#6A686B</color>
+    <color name="common_red">#9F3E1D</color>
+    <color name="solide_gray">#B4B4B4</color>
+    <color name="back_color">#F7F7F7</color>
+    <color name="text_common_balck">#333333</color>
+    <color name="new_order">#8C9198</color>
+    <color name="text_common_gray">#666666</color>
+    <color name="text_common_gray_new">#9E9FA9</color>
+    <color name="wallet_highlighted_text_holo_light">#ffffff</color>
+    <color name="sdk_color_confirm">#909090</color>
+    <color name="view_gray">#F5F5F5</color>
+    <color name="sdk_color_common_red">#F04844</color>
+    <color name="sdk_color_common_black">#404040</color>
+    <color name="btn_gray">#6B6B75</color>
+    <color name="radio_black">#303039</color>
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#2ECC71</color>
+    <color name="orange_color">#FFA847</color>
+    <color name="edit_corn_color">#707070</color>
+    <!-- QRCode scanner color end -->
+</resources>

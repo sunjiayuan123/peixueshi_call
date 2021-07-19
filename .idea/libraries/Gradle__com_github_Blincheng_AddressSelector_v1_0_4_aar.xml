@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Blincheng:AddressSelector:v1.0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4626d5a3a0bf2688d6ab8a853fdb1006/AddressSelector-v1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4626d5a3a0bf2688d6ab8a853fdb1006/AddressSelector-v1.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4626d5a3a0bf2688d6ab8a853fdb1006/AddressSelector-v1.0.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Blincheng/AddressSelector/v1.0.4/cede01be9b9204670b73249f24a68ad57cefa2b2/AddressSelector-v1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

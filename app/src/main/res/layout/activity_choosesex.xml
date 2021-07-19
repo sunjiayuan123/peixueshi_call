@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ChooseSexActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="11dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="33dp"
+        android:src="@mipmap/ic_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:text="选择性别"
+            android:textColor="@color/textcentercolor"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.peixueshi.crm.app.view.CircularImage
+            android:id="@+id/iv_choosegirl"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="62dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+        <com.peixueshi.crm.app.view.CircularImage
+            android:id="@+id/choosegirl"
+          android:layout_alignRight="@+id/iv_choosegirl"
+            android:layout_marginRight="-10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="62dp"
+            android:src="@mipmap/gender_xz_gril" />
+
+
+        <com.peixueshi.crm.app.view.CircularImage
+            android:id="@+id/iv_chooseboy"
+            android:layout_below="@+id/iv_choosegirl"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="62dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/gender_zhuce_boy" />
+
+        <com.peixueshi.crm.app.view.CircularImage
+            android:id="@+id/iv_choosegril"
+            android:layout_below="@+id/iv_choosegirl"
+            android:layout_alignRight="@+id/iv_chooseboy"
+            android:layout_marginRight="-10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="62dp"
+            android:src="@mipmap/gender_xz_boy" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+

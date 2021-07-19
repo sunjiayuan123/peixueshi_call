@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/wang_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="项目名称:"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/wang_pro_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_toEndOf="@+id/wang_pro"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/wang_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wang_pro"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="班       型:"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/wang_name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wang_pro"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/wang_name"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/sp_14" />
+
+
+        <TextView
+            android:id="@+id/wang_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wang_name"
+            android:layout_marginTop="@dimen/dp_6"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="价       格:"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_14" />
+
+
+    <EditText
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_toRightOf="@id/wang_price"
+        android:id="@+id/et_price"
+        android:layout_width="@dimen/dp_80"
+        android:inputType="number"
+        android:paddingStart="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_below="@id/wang_name"
+        android:background="@drawable/btn_edittext_corner"
+        android:layout_height="@dimen/dp_22"
+        android:textSize="@dimen/sp_14"
+        android:focusable="true"
+        android:textColor="@color/common_black"
+        android:hint="0"/>
+    <TextView
+        android:id="@+id/remove_pro"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_below="@id/wang_name"
+        android:layout_toEndOf="@+id/et_price"
+        android:textColor="@color/sdk_color_common_red"
+        android:text="移除该项目"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_below="@+id/wang_price"
+        android:background="@color/view_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"/>
+</RelativeLayout>
+

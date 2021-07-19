@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout android:id="@+id/rl_xuanze_kecheng"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TextView android:text="用户信息:"
+            android:id="@+id/tv_user_info"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/dp_16"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue" />
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical">
+        <TextView android:text="所在项目"
+            android:id="@+id/tv_xiangmu"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dp_110"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16"
+            android:layout_height="wrap_content"/>
+        <TextView android:text="所在小组"
+            android:id="@+id/tv_xiaozu"
+            android:layout_toRightOf="@id/tv_xiangmu"
+            android:layout_toLeftOf="@+id/tv_zuoxi"
+            android:layout_width="match_parent"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_zuoxi"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tv_zuoxi"
+            android:text="接待坐席"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue" />
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chance_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>
+

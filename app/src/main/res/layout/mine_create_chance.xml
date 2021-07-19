@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/home_top_blue">
+        <ImageView android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_back_white_24dp"/>
+        <TextView android:text="机会检索"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/rl_title_view"
+        android:id="@+id/game_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout android:id="@+id/rl_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="20dp">
+
+                <EditText android:id="@+id/et_search_phone"
+                    android:hint="请输入查询手机号"
+                    android:gravity="top|left"
+                    android:inputType="number"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@id/tv_search"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:background="@drawable/btn_edittext_corner"
+                    android:layout_height="@dimen/dp_40"/>
+
+                <TextView android:text="查询"
+                    android:id="@+id/tv_search"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/order_select_up"
+                    android:layout_width="@dimen/dp_80"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/dp_30"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_xiangmu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginRight="20dp">
+                <TextView android:text="项目:"
+                    android:id="@+id/tv_xiangmu"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/dp_16"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/dp_30"/>
+                <EditText android:id="@+id/et_xiangmu"
+                    android:hint="请选择项目"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="match_parent"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_xiangmu"
+                    android:layout_toLeftOf="@+id/tv_create_chance"
+                    android:textSize="@dimen/dp_16"
+                    android:padding="@dimen/dp_10"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@drawable/btn_edittext_corner"
+                    android:layout_height="@dimen/dp_40"/>
+
+                <TextView android:text="创建"
+                    android:id="@+id/tv_create_chance"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/home_top_blue"
+                    android:background="@drawable/btn_gray_corner"
+                    android:layout_width="@dimen/dp_80"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/dp_30"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_beizhu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_130"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="20dp">
+                <TextView android:text="备注:"
+                    android:id="@+id/tv_number"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/text_common_balck"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/dp_16"
+                    android:gravity="center_vertical"
+                    android:layout_height="@dimen/dp_40"/>
+                <EditText android:id="@+id/et_beizhu"
+                    android:hint="备注信息"
+                    android:gravity="top|left"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:inputType="textMultiLine"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:layout_toRightOf="@id/tv_number"
+                    android:textColor="@color/text_common_gray"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:textSize="@dimen/dp_16"
+                    android:padding="@dimen/dp_10"
+                    android:background="@color/back_color"
+                    android:layout_height="@dimen/dp_100"/>
+            </RelativeLayout>
+
+            <include android:visibility="gone"
+                android:id="@+id/ll_chance_history_include"
+                layout="@layout/include_user_create_chance_history" />
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_renling"
+                android:visibility="gone">
+                <TextView android:text="认领"
+                    android:id="@+id/tv_renling"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/order_select_up"
+                    android:layout_width="@dimen/dp_80"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_40"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/dp_30"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

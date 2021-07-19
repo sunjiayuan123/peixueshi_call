@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_85"
+    android:orientation="vertical"
+    android:background="@color/white">
+        <ImageView android:id="@+id/iv_user_call"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:layout_marginTop="@dimen/dp_25"
+            android:clickable="true"
+            android:background="@drawable/selector_home_call_user"/>
+
+       <RelativeLayout android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/dp_10"
+           android:layout_toRightOf="@id/iv_user_call">
+           <TextView android:id="@+id/tv_user_number"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/dp_34"
+               android:gravity="center_vertical"
+               android:textSize="@dimen/dp_16"
+               android:textColor="@color/common_black"
+              />
+           <ImageView android:id="@+id/iv_copy_phone"
+               android:layout_width="@dimen/dp_30"
+               android:layout_height="@dimen/dp_30"
+               android:layout_marginLeft="@dimen/dp_5"
+               android:focusable="false"
+               android:clickable="true"
+               android:layout_marginTop="@dimen/dp_2"
+               android:layout_toRightOf="@id/tv_user_number"
+               android:background="@drawable/copy_phone"/>
+           <TextView android:id="@+id/tv_login_count"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/dp_14"
+               android:layout_below="@id/tv_user_number"
+               android:layout_marginBottom="@dimen/dp_5"
+               android:textColor="@color/common_gray"
+               android:text="登录次数"/>
+
+           <TextView android:id="@+id/tv_user_money"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/dp_14"
+               android:layout_marginLeft="@dimen/dp_10"
+               android:layout_marginBottom="@dimen/dp_5"
+               android:layout_below="@id/tv_user_number"
+               android:layout_toRightOf="@id/tv_login_count"
+               android:textColor="@color/common_gray"
+               android:text="成交金额"/>
+
+           <TextView android:id="@+id/tv_beizhu"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/dp_16"
+               android:layout_below="@id/tv_login_count"
+               android:layout_marginBottom="@dimen/dp_5"
+               android:inputType="text"
+               android:maxLines="1"
+               android:visibility="gone"
+               android:ellipsize="end"
+               android:textColor="@color/common_gray"
+               android:text="备注"/>
+       </RelativeLayout>
+
+
+    <TextView android:id="@+id/tv_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/dp_45"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/common_gray"
+        android:inputType="text"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignParentLeft="true"
+        android:text="创建:"/>
+    <TextView android:id="@+id/tv_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp_14"
+        android:layout_toLeftOf="@id/bt_xiangqing"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_toRightOf="@id/tv_create"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/common_gray"
+        android:text="2020-06-03"/>
+
+    <Button
+        android:id="@+id/bt_xiangqing"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@drawable/shape_text_red"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:focusable="false"
+        android:text="电话记录"
+        android:visibility="gone"
+        android:textColor="@color/common_red" />
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_alignParentRight="true">
+        <Button android:id="@+id/bt_beizhu"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_25"
+            android:textColor="@color/common_black"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/shape_text_gray"
+            android:text="备注"/>
+
+
+        <Button android:id="@+id/bt_huiku"
+            android:textColor="@color/common_red"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_25"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/shape_text_red"
+            android:text="下单"/>
+    </LinearLayout>
+</RelativeLayout>
+
+

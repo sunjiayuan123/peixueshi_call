@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_trans_corner"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <RelativeLayout android:id="@+id/rl_cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_gravity="right">
+        <ImageView android:id="@+id/iv_cancel"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/cancel_bg"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="警示"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        android:textColor="@color/red_f4333c"/>
+    <TextView android:id="@+id/tv_to_bind_warn"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="你最近一个小时拨打电话量已经超限，请换卡或者稍后再次拨打!"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:textColor="@color/text_common_gray"/>
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <TextView android:id="@+id/tv_create"
+            android:layout_width="106dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:text="确定"
+            android:background="@drawable/order_select_up"
+            />
+    </RelativeLayout>
+</LinearLayout>

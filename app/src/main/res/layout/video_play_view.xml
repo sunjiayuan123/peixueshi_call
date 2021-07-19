@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/seekbar_progress_drawable"
+    tools:context=".MainActivity">
+    <!--video_play_background-->
+<!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ListView>
+    </LinearLayout>
+-->
+
+
+    <SeekBar
+        android:id="@+id/sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="4dp"
+        android:minHeight="2dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:max="200"
+        style="@style/CustomSeekbarStyle"
+        android:progress="20"
+        android:paddingRight="12dp"
+        android:paddingTop="3dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20">
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:text="3:00"
+            android:textColor="#4444A6"
+            android:textSize="@dimen/dp_14"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_duration_end"
+            android:layout_width="wrap_content"
+            android:text="-0:55"
+            android:layout_alignParentRight="true"
+            android:textColor="#4444A6"
+            android:textSize="@dimen/dp_14"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="上一首"/>
+
+        <ImageView
+            android:id="@+id/iv_star"
+            android:layout_width="26dp"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/dia_play_pre"
+            android:clickable="true" />
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="停止"/>
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="下一首"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_voice_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/volume_min"/>
+    <SeekBar
+        android:id="@+id/vb_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="4dp"
+        android:minHeight="2dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:layout_toRightOf="@id/iv_voice_left"
+        android:max="200"
+        android:layout_toLeftOf="@+id/iv_voice_right"
+        style="@style/CustomSeekbarStyle1"
+        android:progress="20"
+        android:paddingRight="12dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:paddingTop="3dp" />
+        <ImageView android:id="@+id/iv_voice_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volume_max"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".newactivity.NewNetWorkClassActivity">
+    <RelativeLayout
+        android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/order_left"/>
+        <TextView
+            android:id="@+id/hand_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择网课"
+            android:textSize="@dimen/dp_16"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_40"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--   <Button
+               android:id="@+id/btn_cancel"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dip"
+               android:text="取消"
+               android:textColor="#0e61aa"
+               android:textSize="18sp"
+               android:textStyle="bold" />-->
+
+        <RelativeLayout
+            android:id="@+id/wang_re"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical">
+            <TextView
+                android:text="项目"
+                android:id="@+id/tv_xiangmu"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_alignParentLeft="true"
+                android:layout_width="@dimen/dp_100"
+                android:textColor="@color/btn_gray"
+                android:textSize="@dimen/sp_16"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="班型"
+                android:id="@+id/tv_banxing"
+                android:textColor="@color/btn_gray"
+                android:textSize="@dimen/sp_16"
+                android:layout_toRightOf="@id/tv_xiangmu"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@+id/tv_price"
+                android:layout_height="wrap_content"/>
+            <TextView android:text="价格"
+                android:id="@+id/tv_price"
+                android:textColor="@color/btn_gray"
+                android:textSize="@dimen/sp_16"
+                android:layout_width="@dimen/dp_70"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/xue_re"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical">
+            <TextView android:text="学校"
+                android:id="@+id/tv_school"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_alignParentLeft="true"
+                android:layout_width="@dimen/dp_100"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/dp_16"
+                android:layout_height="wrap_content"/>
+            <TextView android:text="专业"
+                android:id="@+id/tv_zhuanye"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/dp_16"
+                android:layout_toRightOf="@id/tv_school"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@+id/tv_xueli"
+                android:layout_height="wrap_content"/>
+            <TextView android:text="学历"
+                android:id="@+id/tv_xueli"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/dp_16"
+                android:layout_width="@dimen/dp_70"
+                android:layout_toLeftOf="@+id/xue_price"
+                android:layout_height="wrap_content"/>
+            <TextView android:text="价格"
+                android:id="@+id/xue_price"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/dp_16"
+                android:layout_width="@dimen/dp_70"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/view_gray" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_left"
+                android:background="@color/back_color"
+                android:layout_alignParentLeft="true"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="wrap_content"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_right"
+                android:layout_toRightOf="@id/rv_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

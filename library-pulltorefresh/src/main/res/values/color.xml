@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_gray_93">#939393</color>
+
+    <color name="color_pull_bg">#0089fe</color>
+
+    <color name="color_pull_bg2">#F0F0F0</color>
+    <color name="market_game_8080">#808080</color>
+    <color name="pull_white">#ffffff</color>
+</resources>

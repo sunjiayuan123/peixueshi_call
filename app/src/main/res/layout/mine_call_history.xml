@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/home_top_blue">
+        <ImageView android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_back_white_24dp"/>
+        <TextView android:text="通话记录"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title_view"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/ll_chance_history_include"
+            layout="@layout/include_lister_history" />
+    </LinearLayout>
+</RelativeLayout>

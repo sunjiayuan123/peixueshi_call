@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/other_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="证书名称："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/other_pro_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_toEndOf="@+id/other_pro"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/other_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_pro"
+            android:layout_marginTop="@dimen/dp_8"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="姓         名："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/other_name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_pro"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/other_name"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_name"
+            android:layout_marginTop="@dimen/dp_8"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="身份证号："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/card_name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_name"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/other_name"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/dp_14" />
+
+        <TextView
+            android:id="@+id/other_census"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_name"
+            android:layout_marginTop="@dimen/dp_8"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="户          籍："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/other_census_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_name"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_toRightOf="@id/other_census"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/text_common_gray"
+            android:textSize="@dimen/dp_14" />
+
+
+        <TextView
+            android:id="@+id/order_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_census"
+            android:layout_marginTop="@dimen/dp_8"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="价          格："
+            android:textColor="@color/font_333333"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginLeft="@dimen/dp_17"/>
+
+        <TextView
+            android:id="@+id/remove_pro"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_below="@id/other_census"
+            android:layout_toEndOf="@+id/order_pay_money"
+            android:textColor="@color/text_common_gray"
+            android:text="移除该项目"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@+id/order_pay_money"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/view_gray"/>
+    </RelativeLayout>
+
+</LinearLayout>

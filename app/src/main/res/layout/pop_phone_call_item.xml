@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+
+    <ImageView android:id="@+id/iv_call"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ic_menu_call"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"/>
+        <TextView android:text="18613860000"
+            android:id="@+id/tv_phone"
+            android:layout_toRightOf="@id/iv_call"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:textColor="@color/red_f4333c"
+            android:textSize="@dimen/dp_16"
+            android:layout_height="wrap_content"/>
+
+    <TextView android:text="5月6日 17:39"
+        android:id="@+id/tv_call_time"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:textColor="@color/text_common_gray"
+        android:layout_toLeftOf="@+id/iv_play"
+        android:textSize="@dimen/dp_12"
+        android:layout_height="wrap_content"/>
+    <TextView android:text="呼出"
+        android:id="@+id/tv_call_state"
+        android:layout_below="@id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/iv_call"
+        android:layout_toLeftOf="@id/tv_call_long"
+        android:textColor="@color/text_common_gray"
+        android:textSize="@dimen/dp_14"
+        android:layout_height="wrap_content"/>
+    <TextView android:text="未接通"
+        android:id="@+id/tv_call_long"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_below="@id/tv_call_time"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_toLeftOf="@+id/iv_play"
+        android:textColor="@color/text_common_gray"
+        android:textSize="@dimen/dp_12"
+        android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/iv_play"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/play_nor"
+        android:layout_marginTop="@dimen/dp_10"
+        android:clickable="true"
+        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+

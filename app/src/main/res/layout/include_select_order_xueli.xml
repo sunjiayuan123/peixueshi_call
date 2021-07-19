@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30">
+        <TextView android:text="学历"
+            android:id="@+id/tv_select"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dp_100"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_18"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/tv_clear_xueli"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="清空"
+            android:textSize="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:textColor="@color/home_top_blue"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue" />
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical">
+        <TextView android:text="学校"
+            android:id="@+id/tv_school"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dp_100"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_18"
+            android:layout_height="wrap_content"/>
+        <TextView android:text="专业"
+            android:id="@+id/tv_zhuanye"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_18"
+            android:layout_toRightOf="@id/tv_school"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/tv_xueli"
+            android:layout_height="wrap_content"/>
+        <TextView android:text="学历"
+            android:id="@+id/tv_xueli"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_18"
+            android:layout_width="@dimen/dp_70"
+            android:layout_toLeftOf="@+id/tv_price"
+            android:layout_height="wrap_content"/>
+        <TextView android:text="价格"
+            android:id="@+id/tv_price"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_18"
+            android:layout_width="@dimen/dp_80"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue" />
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_select_xueli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_beizhu"
+            android:layout_width="@dimen/dp_110"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:text="备注时间"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_zuoxi"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_beizhu"
+            android:text="坐席"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_goutong_state"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_zuoxi"
+            android:text="沟通状态"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tv_goutong_state"
+            android:text="备注"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_call_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: me.jessyan:arms-autolayout:2.5.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45b89cd4d2f8fda3b3404730c5434a97/arms-autolayout-2.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45b89cd4d2f8fda3b3404730c5434a97/arms-autolayout-2.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45b89cd4d2f8fda3b3404730c5434a97/arms-autolayout-2.5.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.jessyan/arms-autolayout/2.5.0/26b16423418ae5281f4b135293d97d44f54d56c4/arms-autolayout-2.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.jessyan/arms-autolayout/2.5.0/31e67fc69e02441926b3973bb7486155b639e223/arms-autolayout-2.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/home_top_blue" />
+<!--
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chance_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>-->
+
+    <com.sina.weibo.view.PullDownView
+        android:id="@+id/user_pull_to_refresh"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.peixueshi.crm.ui.widget.LoadMoreListView
+            android:id="@+id/rv_chance_history"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.sina.weibo.view.PullDownView>
+
+</LinearLayout>
+

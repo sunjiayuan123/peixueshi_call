@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_16">
+        <TextView
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:id="@+id/sign"
+            android:text="签到"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_red_corner"
+            android:layout_width="@dimen/dp_66"
+            android:layout_height="@dimen/dp_28"/>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_get_zixun"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bt_get_zixun" />
+
+        <TextView
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:background="@drawable/btn_project"
+            android:id="@+id/tv_huoqu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_28"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/sign"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textSize="@dimen/sp_14"
+            android:maxLines="1"
+            android:text="获取首咨" />
+
+        <TextView
+            android:paddingStart="@dimen/dp_4"
+            android:paddingEnd="@dimen/dp_4"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_project_num"
+            android:id="@+id/tv_current_get"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_28"
+            android:layout_toRightOf="@id/tv_huoqu_text"
+            android:gravity="center_vertical"
+            android:text="1/10" />
+        <TextView
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toRightOf="@+id/tv_current_get"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:id="@+id/ask_for"
+            android:text="索取"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_red_corner"
+            android:layout_width="@dimen/dp_57"
+            android:layout_height="@dimen/dp_28"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_next_get_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/tv_count_number"
+            android:gravity="center_vertical"
+            android:text="00:00" />
+
+        <TextView
+            android:textSize="@dimen/sp_14"
+            android:id="@+id/tv_count_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:text="共0个" />
+    </RelativeLayout>
+    <!--  <TextView android:id="@+id/txt_content"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dp_20"
+          android:text="中宇博学后台管理系统"
+          android:textStyle="bold"
+          android:visibility="gone"
+          android:textColor="@color/mine_color_text_gray"
+          android:textSize="@dimen/dp_22"/>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.sina.weibo.view.PullDownView
+            android:id="@+id/user_pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.peixueshi.crm.ui.widget.LoadMoreListView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+        </com.sina.weibo.view.PullDownView>
+
+        <LinearLayout
+            android:id="@+id/ll_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/none_info"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center"
+                android:text="暂无数据，点击刷新"
+                android:textColor="@drawable/test_pressed"
+                android:textSize="@dimen/dp_16" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

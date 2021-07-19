@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+        <ImageView android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/order_left" />
+        <TextView
+            android:text="创建机会"
+            android:textColor="@color/radio_black"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_title_view">
+        <LinearLayout
+            android:id="@+id/li_phone"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="手机号:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_118"
+                android:textColor="@color/radio_black"/>
+            <EditText
+                android:id="@+id/et_phone_number"
+                android:hint="输入手机号"
+                android:textColor="@color/text_common_gray"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="@dimen/dp_14"
+                android:inputType="number"
+                android:layout_toRightOf="@id/tv_number"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/li_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30">
+            <TextView
+                android:id="@+id/phone"
+                android:text="手机号:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/radio_black"
+                android:layout_marginLeft="@dimen/dp_40"/>
+
+            <EditText
+                android:id="@+id/et_xiangmu"
+                android:textColor="@color/text_common_gray"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_width="@dimen/dp_300"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="@dimen/dp_14"
+                android:hint="选择项目"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@null"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_below="@+id/phone"/>
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/icon_down_hover"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/line"
+                android:layout_below="@+id/et_xiangmu"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_submit_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_136">
+            <TextView
+                android:id="@+id/create_opportunities"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:background="@drawable/order_select_up"
+                android:gravity="center"
+                android:text="创建机会"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--<LinearLayout
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:id="@+id/li_phone"
+        android:layout_below="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>-->
+
+
+
+
+</RelativeLayout>

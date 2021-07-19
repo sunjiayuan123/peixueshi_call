@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line">#eeeeee</color>
+    <color name="font_333333">#333333</color>
+
+    <color name="font_6882fd">#6882fd</color>
+    <color name="font_ff3e6d">#ff3e6d</color>
+    <color name="font_999999">#999999</color>
+    <color name="font_eeeeee">#eeeeee</color>
+
+
+    <color name="buttoncolor">#FF3E6D</color>
+    <color name="textcolor">#999999</color>
+    <color name="countcolor">#FF3E6D</color>
+    <color name="textcentercolor">#333333</color>
+    <color name="black">#000000</color>
+    <color name="font_dddddd">#dddddd</color>
+    <color name="font_f3f6f8">#f3f6f8</color>
+    <color name="font_666666">#666666</color>
+    <color name="font_line">#eeeeee</color>
+    <color name="font_f8f8f8">#f8f8f8</color>
+    <color name="admin_bg">#A76FEE</color>
+    <color name="color_blue">#2196f3</color>
+    <color name="transparnet">#11ffffff</color>
+    <color name="font_7d7d7d">#7D7D7D</color>
+    <color name="font_262626">#262626</color>
+    <color name="font_4a4a4a">#4A4A4A</color>
+    <color name="font_999ca0">#999CA0</color>
+    <color name="font_a8a8a8">#A8A8A8</color>
+    <color name="font_eff0f1">#EFF0F1</color>
+    <color name="font_ebeef0">#EBEEF0</color>
+    <color name="font_f96159">#F96159</color>
+    <color name="font_ff4040">#FF4040</color>
+    <color name="font_008bff">#008BFF</color>
+    <color name="font_3e8ff">#3E8FFF</color>
+    <color name="font_107aee">#107AEE</color>
+    <color name="fffec84d">#fffec84d</color>
+    <color name="font_f76812">#F76812</color>
+    <color name="ff45cb7f">#ff45cb7f</color>
+    <color name="font_27cd6f">#27CD6F</color>
+    <color name="font_27cd6e">#27CD6E</color>
+    <color name="ffff4040">#ffff4040</color>
+    <color name="ffa8a8a8">#ffa8a8a8</color>
+    <color name="font_000000">#000000</color>
+    <color name="font_b3000000">#B3000000</color>
+    <color name="font_f44b2f">#F44B2F</color>
+    <color name="font_fbaf15">#FBAF15</color>
+    <color name="font_f5f6f8">#F5F6F8</color>
+    <color name="font_3299ff">#3299FF</color>
+    <color name="font_e5f2ff">#E5F2FF</color>
+
+    <color name="grey_a5a5a5">#A5A5A5</color>
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="red_f4333c">#F4333C</color>
+    <color name="grey_dde1e7">#DDE1E7</color>
+    <color name="grey_b2b2b2">#B2B2B2</color>
+    <color name="blue_01aaee">#01AAEE</color>
+    <color name="page_gray_cc">#cccccc</color>
+    <color name="page_black_cc">#b01a1a1a</color><!--灰色cc -->
+    <color name="ff262626">#262626</color>
+    <color name="F8F6F5">#F8F6F5</color>
+
+    <color name="progressStartColor">#6295f0</color>
+    <color name="progressEndColor">#afcaff</color>
+    <color name="bgColor">#d8d8d8</color>
+    <color name="font_080D22">#080D22</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="color_finanical">#EDD1BF</color>
+    <color name="color_141414">#141414</color>
+    <color name="color_fd6d60">#fd6d60</color>
+    <color name="color_353535">#353535</color>
+    <color name="color_FF8400">#FF8400</color>
+    <color name="newcolor_bule">#337FEB</color>
+    <color name="newcolor_gray">#9E9FA9</color>
+</resources>
+

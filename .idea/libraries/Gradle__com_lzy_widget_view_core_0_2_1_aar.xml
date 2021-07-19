@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.lzy.widget:view-core:0.2.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9824d64c40ded0906d0a046a2f95d5b6/view-core-0.2.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9824d64c40ded0906d0a046a2f95d5b6/view-core-0.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9824d64c40ded0906d0a046a2f95d5b6/view-core-0.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9824d64c40ded0906d0a046a2f95d5b6/view-core-0.2.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lzy.widget/view-core/0.2.1/dcd4a95a3e47768b786188df9ff23e1a6a96ebea/view-core-0.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lzy.widget/view-core/0.2.1/6b75700b7dd391fd38c09507b21cc0d87f6e3220/view-core-0.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

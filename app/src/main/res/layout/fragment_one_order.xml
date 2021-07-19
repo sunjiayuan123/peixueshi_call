@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="@string/manager_name"
+        android:textColor="@color/mine_color_text_gray"
+        android:textSize="@dimen/dp_22"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sina.weibo.view.PullDownView
+            android:id="@+id/user_pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <!-- <com.yuxue.crm.ui.widget.LoadMoreListView
+              android:id="@+id/recycle_view"
+              android:background="@color/white"
+              android:paddingLeft="@dimen/dp_20"
+              android:paddingRight="@dimen/dp_20"
+                 android:divider="@null"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"/>-->
+
+            <com.peixueshi.crm.ui.widget.ExpandableListView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/view_gray"
+                android:childDivider="@null"
+                android:divider="@null"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" />
+            <!--android:listSelector="#00000000"-->
+        </com.sina.weibo.view.PullDownView>
+
+        <LinearLayout
+            android:id="@+id/ll_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/none_info"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center"
+                android:text="暂无数据，点击刷新"
+                android:textColor="@drawable/test_pressed"
+                android:textSize="@dimen/dp_16" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

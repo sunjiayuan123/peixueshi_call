@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+<!--
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#30469b"
+                android:visibility="gone"
+                app:layout_scrollFlags="scroll|enterAlways" />-->
+
+       <!--     app:tabIndicatorHeight = "0dp" 下划线-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorFullWidth="false"
+                android:layout_marginRight="@dimen/dp_160"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:background="@color/white"
+                app:tabTextAppearance="@style/TabLayoutTextSize"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabIndicatorColor="@color/home_top_blue"
+                app:tabSelectedTextColor="@color/text_common_balck"
+                app:tabTextColor="@color/text_common_gray" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+   <!-- <LinearLayout android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/call_Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="开启拨号权限"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/call_Stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="关闭拨号权限"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/call_user_cardchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="切换账号拨打电话"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>-->
+
+
+</LinearLayout>

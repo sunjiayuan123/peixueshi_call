@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/home_top_blue">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="下单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/game_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_line1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="手  机  号:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+
+                <EditText
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_number"
+                    android:background="@drawable/btn_edittext_corner"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textColor="@color/text_common_gray"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:textSize="@dimen/dp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_pay_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="支付方式:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+
+                <RadioGroup
+                    android:id="@+id/rg_pay_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_pay_type"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_zhifubao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:drawablePadding="8dp"
+                        android:text="支付宝"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:id="@+id/rb_weixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:drawablePadding="8dp"
+                        android:text="微信"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rg_group_call_mute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:buttonTint="@color/home_top_blue"
+                        android:drawablePadding="8dp"
+                        android:text="其他"
+                        android:textSize="@dimen/dp_12" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_pay_leixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="支付类型:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+
+                <RadioGroup
+                    android:id="@+id/rg_pay_leixing_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_pay_leixing"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_quankuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:drawablePadding="8dp"
+                        android:text="全款"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_dingjin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:buttonTint="@color/home_top_blue"
+                        android:drawablePadding="8dp"
+                        android:text="定金"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_weikuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:buttonTint="@color/home_top_blue"
+                        android:drawablePadding="8dp"
+                        android:text="尾款"
+                        android:textSize="@dimen/dp_12" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et_mother_order_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_50"
+                android:layout_toRightOf="@id/tv_number"
+                android:background="@drawable/btn_edittext_corner"
+                android:gravity="center"
+                android:hint="若之前有订单，请在此输入订单号"
+                android:paddingLeft="@dimen/dp_10"
+                android:textColor="@color/text_common_gray"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="@dimen/dp_14"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_wangke_leixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="网课类型:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+
+                <RadioGroup
+                    android:id="@+id/rg_wangke_leixing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_wangke_leixing"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_wangke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:text="网课"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_xueli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:text="学历"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_xiezhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:text="协助报名"
+                        android:textSize="@dimen/dp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rb_zhiqu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/home_top_blue"
+                        android:text="其他"
+                        android:textSize="@dimen/dp_12" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayout_wangke_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rl_xuanze_kecheng"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_select_ke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="待选订单:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+                <!-- <EditText android:text="课程展示"
+                     android:textColor="@color/text_common_gray"
+                     android:layout_marginLeft="@dimen/dp_10"
+                     android:layout_width="@dimen/dp_160"
+                     android:textSize="@dimen/dp_16"
+                     android:paddingLeft="@dimen/dp_10"
+                     android:layout_toRightOf="@id/tv_select_ke"
+                     android:background="@color/back_color"
+                     android:layout_centerVertical="true"
+                     android:layout_height="@dimen/dp_40"/>-->
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/ll_wangke_include"
+                layout="@layout/include_select_order_wangke"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/ll_xueli_include"
+                layout="@layout/include_select_order_xueli"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/ll_xiezhu_include"
+                layout="@layout/include_select_order_xiezhu"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/ll_zhiqu_include"
+                layout="@layout/include_select_order_zhiqu"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_beizhu"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_beizhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="备    注:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+
+                <EditText
+                    android:id="@+id/et_beizhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/tv_beizhu"
+                    android:background="@drawable/btn_edittext_corner"
+                    android:hint="请输入备注信息"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textColor="@color/text_common_gray"
+                    android:textSize="@dimen/dp_16" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_count_money"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_money_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="总金额:"
+                    android:textColor="@color/text_common_balck"
+                    android:textSize="@dimen/dp_14" />
+
+                <EditText
+                    android:id="@+id/et_count_money"
+                    android:layout_width="@dimen/dp_160"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_money_count"
+                    android:background="@drawable/btn_edittext_corner"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:text="0"
+                    android:textColor="@color/text_common_gray"
+                    android:textSize="@dimen/dp_16" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@color/transparnet"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_16"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_submit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/game_play"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/order_select_up"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

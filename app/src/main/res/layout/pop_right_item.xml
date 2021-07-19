@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    tools:context=".activity.LoginActivity">
+    <TextView android:id="@+id/tv_banxing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/tv_price"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/btn_gray"
+        android:text="2020执业药师名师分享班"/>
+    <TextView android:id="@+id/tv_price"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/btn_gray"
+        android:text="800"/>
+</RelativeLayout>
+

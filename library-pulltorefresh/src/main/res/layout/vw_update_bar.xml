@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" 
+		android:layout_height="@dimen/updatebar_height"
+		android:layout_gravity="center_horizontal|bottom"
+	    android:gravity="center"
+		android:orientation="horizontal"
+		android:id ="@+id/pulldown_ad"
+	    android:background="@color/pull_white">
+		
+	  <!-- 防止大图广告导致加载提示位置偏上 -->
+	  <LinearLayout 
+	        android:layout_width="fill_parent"
+			android:layout_height="@dimen/updatebar_height"
+			android:layout_gravity="center_horizontal|bottom"
+			android:orientation="horizontal">
+	        
+	    <FrameLayout 
+		    android:id="@+id/iv_content"
+		    android:layout_width="@dimen/pull_refresh_progress_size"
+			android:layout_height="@dimen/pull_refresh_progress_size"
+			android:layout_marginRight="@dimen/updatebar_icon_space" 
+			android:layout_gravity="center">
+			<ImageView 
+			    android:id="@+id/iv_arrow"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:scaleType="fitCenter" />
+			<ImageView
+			    android:id="@+id/pb_loading"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:scaleType="fitCenter"
+			    android:src="@drawable/tableview_loading" />
+		</FrameLayout>
+	    
+		<LinearLayout
+		    android:id="@+id/ly_title"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:orientation="vertical">
+			<TextView 
+			    android:id="@+id/tv_title1"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/market_game_8080"
+				android:textSize="12sp"
+				/>
+			<TextView 
+			    android:id="@+id/tv_title2"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/market_game_8080"
+				android:textSize="9sp"
+				/>
+		</LinearLayout>
+	  </LinearLayout>
+		
+	</LinearLayout>

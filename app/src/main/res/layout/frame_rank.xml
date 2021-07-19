@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <!--  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/home_top_blue"/>-->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="排行榜"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_common_balck"
+        android:textSize="@dimen/dp_16"/>
+
+
+</LinearLayout>
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+        <TextView android:id="@+id/tv_zhaosheng"
+            android:layout_width="@dimen/dp_130"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_rank_select_left"
+            android:text="招生明星榜"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_14"/>
+        <TextView android:id="@+id/tv_xiaozu"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/tv_zhaosheng"
+            android:text="小组排行榜"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/dp_130"
+            android:background="@drawable/shape_rank_common_right"
+            android:gravity="center"
+            android:textColor="@color/home_top_blue"
+            android:textSize="@dimen/dp_14"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rank_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
