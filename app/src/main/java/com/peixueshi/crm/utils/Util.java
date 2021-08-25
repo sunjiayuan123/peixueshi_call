@@ -1,17 +1,5 @@
 package com.peixueshi.crm.utils;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.text.SimpleDateFormat;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.Manifest;
 import android.app.Activity;
 import android.content.ComponentName;
@@ -28,9 +16,22 @@ import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.Time;
+import android.util.Log;
 import android.widget.Toast;
 
-import com.mf.library.utils.Constant;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TimeZone;
 
 
 public class Util {
@@ -58,13 +59,13 @@ public class Util {
 
     /**
      * 将时间戳转换为时间
-     *
+     * <p>
      * s就是时间戳
      */
 
     public static String stampToDate(String s) {
         String res;
-        if (!TextUtils.isEmpty(s)){
+        if (!TextUtils.isEmpty(s)) {
             if (s.length() == 10) {
                 s = s + "000";
             }
@@ -74,16 +75,63 @@ public class Util {
 //        Date date = new Date(lt * 1000);
             Date date = new Date(lt);
             res = simpleDateFormat.format(date);
-        }else {
+        } else {
             return "0";
         }
 
         return res;
     }
 
+    /*
+     * 使用Calendar获取系统时间
+     */
+
+    public static String  getCalendarTime(){
+        final Calendar c = Calendar.getInstance();
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        int mYear = c.get(Calendar.YEAR);//年
+        int mMonth = c.get(Calendar.MONTH) + 1;//月
+        int mDay = c.get(Calendar.DAY_OF_MONTH);//日
+        int mHour = c.get(Calendar.HOUR_OF_DAY);//24小时格式    HOUR(12小时格式)
+        int  mMinute = c.get(Calendar.MINUTE);//分
+        int  mSecond = c.get(Calendar.SECOND);//秒
+        String time=mYear+"-"+getStrs(mMonth)+"-"+getStrs(mDay);
+
+        Log.e("测试网络时间",time);
+        return time;
+    }
+    /**
+     * 个位数的时候前面补一个0
+     * @param num
+     * @return
+     */
+    public static String getStrs(int num){
+        String string ;
+        if (isNum(num)){
+            string= String.valueOf(num);
+        }else {
+            string="0"+num;
+        }
+        return string;
+    }
 
     /**
+     * 判断是否为个位数
+     * @param num
+     * @return
+     */
+    public static boolean isNum(int num){
+        boolean isNum;
+        if (num >9) {
+            isNum=true;
+        } else {
+            isNum=false;
+        }
+        return isNum;
+    }
+    /**
      * 获取过去几天时间戳
+     *
      * @param past 天
      * @return
      */
@@ -160,9 +208,6 @@ public class Util {
     }
 
     public static void saveStringPref(Context context, String key, String value) {
-        if (context==null){
-            context= Constant.context;
-        }
         SharedPreferences pref = context.getSharedPreferences(SHAREDPREFERENCES_NAME, Activity.MODE_PRIVATE);
         if (value != null && value.length() > 0) {
             pref.edit().putString(key, value).apply();
@@ -215,6 +260,15 @@ public class Util {
             }
         }
         return defValue;
+    }
+    public static final String TIME_SERVER = "time-a.nist.gov";
+    //获取网络时间，不根据手机设置变化
+
+    public static String  getData() {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+//设置日期格式
+        String date = df.format(new Date());
+        return date;
     }
 
     public static String md5(String string) {
@@ -319,8 +373,9 @@ public class Util {
 
     /**
      * 调用第三方浏览器打开
+     *
      * @param context
-     * @param url 要浏览的资源地址
+     * @param url     要浏览的资源地址
      */
     public static void openBrowser(Activity context, String url) {
         final Intent intent = new Intent();
@@ -341,7 +396,6 @@ public class Util {
      * 获取版本名称
      *
      * @param context 上下文
-     *
      * @return 版本名称
      */
     public static String getVersionName(Context context) {
@@ -385,7 +439,6 @@ public class Util {
     }
 
 
-
     /**
      * 获取音频文件的总时长大小
      *
@@ -402,7 +455,7 @@ public class Util {
             mediaPlayer.setDataSource(filePath);
             mediaPlayer.prepare();
             mediaPlayerDuration = mediaPlayer.getDuration();
-            mediaPlayerDuration = mediaPlayerDuration/1000;
+            mediaPlayerDuration = mediaPlayerDuration / 1000;
         } catch (IOException ioException) {
         }
         if (mediaPlayer != null) {
@@ -411,8 +464,8 @@ public class Util {
             mediaPlayer.release();
         }
 //        int dura = 193580;
-        if(mediaPlayerDuration>100000){
-            mediaPlayerDuration = mediaPlayerDuration/1000;
+        if (mediaPlayerDuration > 100000) {
+            mediaPlayerDuration = mediaPlayerDuration / 1000;
         }
         return mediaPlayerDuration;
     }
@@ -421,18 +474,18 @@ public class Util {
     /*
      * 将时间转换为时间戳
      */
-    public static String dateToStamp(String s){
+    public static String dateToStamp(String s) {
         String res = "";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-        try{
+        try {
             Date date = simpleDateFormat.parse(s);
-            long ts = date.getTime()/1000;
+            long ts = date.getTime() / 1000;
             res = String.valueOf(ts);
-        }catch (Exception e){
-            
+        } catch (Exception e) {
+
         }
 
-      
+
         return res;
     }
 

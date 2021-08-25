@@ -6,7 +6,7 @@ public class ZiXunUserInfo implements Serializable {
 
    public String wf_id;
     public int wf_uid;
-   public long wf_p_id;
+   public int wf_p_id;
    public String wf_p_name;
    public String wf_phone;
    public String wf_u_note;
@@ -152,7 +152,13 @@ public class ZiXunUserInfo implements Serializable {
     public String getWf_id() {
         return wf_id;
     }
-
+    public int wp_pid;
+    public int getWp_pid() {
+        return wp_pid;
+    }
+    public void setWp_pid(int wp_pid) {
+        this.wp_pid = wp_pid;
+    }
     public void setWf_id(String wf_id) {
         this.wf_id = wf_id;
     }
@@ -166,11 +172,11 @@ public class ZiXunUserInfo implements Serializable {
         this.wf_uid = wf_uid;
     }
 
-    public long getWf_p_id() {
+    public int getWf_p_id() {
         return wf_p_id;
     }
 
-    public void setWf_p_id(long wf_p_id) {
+    public void setWf_p_id(int wf_p_id) {
         this.wf_p_id = wf_p_id;
     }
 

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SetPhoneActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/home_top_blue">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="号码设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16" />
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:id="@+id/zhu_phone"
+        android:text="主号"
+        android:textSize="@dimen/sp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/et_pass_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@id/tv_pass"
+        android:background="@drawable/btn_edittext_corner"
+        android:gravity="top|left"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/text_common_gray"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="@dimen/dp_16" />
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:id="@+id/fu_phone"
+        android:text="副号"
+        android:textSize="@dimen/sp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/et_fu_phone_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toRightOf="@id/tv_pass"
+        android:background="@drawable/btn_edittext_corner"
+        android:gravity="top|left"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/text_common_gray"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="@dimen/dp_16" />
+    <TextView
+        android:layout_marginTop="@dimen/dp_8"
+        android:id="@+id/tishi"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/ll_submit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/order_select_up"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

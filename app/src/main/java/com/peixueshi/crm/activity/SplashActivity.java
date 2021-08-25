@@ -17,6 +17,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jess.arms.base.BaseActivity;
+import com.jess.arms.di.component.AppComponent;
 import com.peixueshi.crm.MainActivity;
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.app.inter.OkhttpCallback;
@@ -27,8 +29,6 @@ import com.peixueshi.crm.bean.UserInfo;
 import com.peixueshi.crm.utils.EnjoyPreference;
 import com.peixueshi.crm.utils.JSONUtil;
 import com.peixueshi.crm.utils.PromptManager;
-import com.jess.arms.base.BaseActivity;
-import com.jess.arms.di.component.AppComponent;
 import com.werb.permissionschecker.PermissionChecker;
 
 import org.json.JSONObject;
@@ -235,6 +235,7 @@ public class SplashActivity extends BaseActivity {
 //                            Log.e("获取验证码测试---->", "hc--->***:" + head.get(0));
 //                            Log.e("获取验证码测试---->", "hc--->***:" + head);
                     if (jsonObject.getInt("err") == 0) {
+                        Log.e("tag", "parseNetworkResponse:ddddd "+jsonObject.toString() );
                         getUserInfo(jsonObject);
                     } else {
                         Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
@@ -302,6 +303,8 @@ public class SplashActivity extends BaseActivity {
                 EnjoyPreference.saveString(getApplicationContext(), "pass", paddMd);
                 EnjoyPreference.saveString(getApplicationContext(), "acc_token", userToken);
                 EnjoyPreference.saveString(getApplicationContext(), "emp_id", infos.getEmp_id() + "");
+                EnjoyPreference.saveString(getApplicationContext(), "emp_team_id", infos.getEmp_team_id() + "");
+                EnjoyPreference.saveString(getApplicationContext(), "emp_name", infos.getEmp_name() + "");
                 Toast.makeText(getApplicationContext(), "登录成功" + infos.getEmp_name(), Toast.LENGTH_SHORT).show();
 
                 int roleId = infos.getEmp_role_id();

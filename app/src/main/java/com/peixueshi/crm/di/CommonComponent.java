@@ -8,9 +8,12 @@ import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.DetailXiangqingActivity;
 import com.peixueshi.crm.activity.MineCallHistoryActivity;
 import com.peixueshi.crm.activity.MineCreateChanceActivity;
+import com.peixueshi.crm.activity.MineZhongHistoryActivity;
 import com.peixueshi.crm.activity.MinehandMasterActivity;
 import com.peixueshi.crm.activity.ModifyPassActivity;
 import com.peixueshi.crm.activity.OrderActivity;
+import com.peixueshi.crm.activity.RealPhoneActivity;
+import com.peixueshi.crm.activity.SetPhoneActivity;
 import com.peixueshi.crm.activity.ShowAllOrderActivity;
 import com.peixueshi.crm.activity.ShowExpressInfoActivity;
 import com.peixueshi.crm.activity.ShowSearchOrder;
@@ -38,7 +41,9 @@ import dagger.Component;
 @Component(modules = CommonModule.class, dependencies = AppComponent.class)
 public interface CommonComponent {
     //------Activity--------
-
+    void inject(SetPhoneActivity activity);
+    void inject(RealPhoneActivity activity);
+    void inject(MineZhongHistoryActivity activity);
     void inject(MainActivity activity);
     void inject(ModifyPassActivity activity);
     void inject(MineCallHistoryActivity mineCallHistoryActivity);

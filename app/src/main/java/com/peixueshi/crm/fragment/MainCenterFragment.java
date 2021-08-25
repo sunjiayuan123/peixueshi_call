@@ -31,10 +31,13 @@ import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.LoginActivity;
 import com.peixueshi.crm.activity.MineCallHistoryActivity;
 import com.peixueshi.crm.activity.MineCreateChanceActivity;
+import com.peixueshi.crm.activity.MineZhongHistoryActivity;
 import com.peixueshi.crm.activity.MinehandMasterActivity;
 import com.peixueshi.crm.activity.ModifyPassActivity;
 import com.peixueshi.crm.activity.OrderActivity;
+import com.peixueshi.crm.activity.RealPhoneActivity;
 import com.peixueshi.crm.activity.ScanSureActivity;
+import com.peixueshi.crm.activity.SetPhoneActivity;
 import com.peixueshi.crm.app.inter.OkhttpCallback;
 import com.peixueshi.crm.app.utils.OkHttpUtils;
 import com.peixueshi.crm.base.Constants;
@@ -50,8 +53,10 @@ import com.peixueshi.crm.utils.PromptManager;
 import com.peixueshi.crm.utils.Util;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.Date;
@@ -60,6 +65,9 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 
 public class MainCenterFragment extends BaseFragment {
@@ -85,7 +93,9 @@ public class MainCenterFragment extends BaseFragment {
     RelativeLayout rl_modify_pass;
     @BindView(R.id.rl_call_history)
     RelativeLayout rl_call_history;
-
+    //号码设置
+    @BindView(R.id.rl_call_set)
+    RelativeLayout rl_call_set;
     @BindView(R.id.rl_jilu)
     RelativeLayout rl_jilu;
 
@@ -102,17 +112,19 @@ public class MainCenterFragment extends BaseFragment {
     TextView tv_duration;
     @BindView(R.id.tv_scan)
     TextView tv_scan;
-//    @BindView(R.id.tv_sound_local)
+    //    @BindView(R.id.tv_sound_local)
     public static TextView tv_sound_local;
-
+    @BindView(R.id.rl_set)
+    RelativeLayout rl_set;
     @BindView(R.id.view_line4)
     View view_line4;
 
     MyViewPagerAdapter adapter;
-  /*  @BindView(R.id.viewpager)
-    ViewPager vp;*/
+    /*  @BindView(R.id.viewpager)
+      ViewPager vp;*/
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
+
     @Override
     public void setupFragmentComponent(@NonNull AppComponent appComponent) {
         DaggerCommonComponent.builder()
@@ -131,24 +143,24 @@ public class MainCenterFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        if(tabLayout != null){
+        if (tabLayout != null) {
             Calendar calendar = Calendar.getInstance();
             Date today = new Date();
             calendar.setTime(today);// 此处可换为具体某一时间
-            int weekDay = calendar.get(Calendar.DAY_OF_WEEK)-1;
+            int weekDay = calendar.get(Calendar.DAY_OF_WEEK) - 1;
             int monthDay = calendar.get(Calendar.DAY_OF_MONTH);
-            Log.i("MainCenterFragment","点击了"+currentSelectTab);
-            if(currentSelectTab == 0){
-                getMineAchievement(1);
-            }else if(currentSelectTab == 1){
-                getMineAchievement(weekDay);
-            }else if(currentSelectTab == 2){
-                getMineAchievement(monthDay);
+            Log.i("MainCenterFragment", "点击了" + currentSelectTab);
+            if (currentSelectTab == 0) {
+                getcountTime(1);
+            } else if (currentSelectTab == 1) {
+                getcountTime(weekDay);
+            } else if (currentSelectTab == 2) {
+                getcountTime(monthDay);
             }
         }
         tv_sound_local = getActivity().findViewById(R.id.tv_sound_local);
-        if(Constants.qiniuToken != null && tv_sound_local != null){
-            tv_sound_local.setText("本地录音(共"+MainActivity.getSoundReocrdCount()+"条,可点击上传)");
+        if (Constants.qiniuToken != null && tv_sound_local != null) {
+            tv_sound_local.setText("本地录音(共" + MainActivity.getSoundReocrdCount() + "条,可点击上传)");
         }
     }
 
@@ -177,7 +189,7 @@ public class MainCenterFragment extends BaseFragment {
         if (requestCode == Constant.REQ_QR_CODE && resultCode == Activity.RESULT_OK) {
             Bundle bundle = data.getExtras();
             String uuid = bundle.getString(Constant.INTENT_EXTRA_KEY_QR_SCAN);
-            Toast.makeText(getActivity(),"扫码结果"+uuid,Toast.LENGTH_SHORT);
+            Toast.makeText(getActivity(), "扫码结果" + uuid, Toast.LENGTH_SHORT);
             //将扫描出的信息显示出来
 //            tvResult.setText(scanResult);
             requestCodeIsLogin(uuid);
@@ -187,9 +199,8 @@ public class MainCenterFragment extends BaseFragment {
 
     private void requestCodeIsLogin(String uuid) {
         try {
-            String  reqUrl = Constants.host+"login/qr_login_scan?uuid="+uuid;
-            OkHttpUtils.get(getActivity(), reqUrl, new OkhttpCallback()
-            {
+            String reqUrl = Constants.host + "login/qr_login_scan?uuid=" + uuid;
+            OkHttpUtils.get(getActivity(), reqUrl, new OkhttpCallback() {
                 @Override
                 public void onBefore() {
                     super.onBefore();
@@ -209,7 +220,7 @@ public class MainCenterFragment extends BaseFragment {
                 public Object parseNetworkResponse(JSONObject object) throws
                         Exception {
                     Intent intent = new Intent(getActivity(), ScanSureActivity.class);
-                    intent.putExtra("uuid",uuid);
+                    intent.putExtra("uuid", uuid);
                     startActivity(intent);
                     return null;
                 }
@@ -243,11 +254,25 @@ public class MainCenterFragment extends BaseFragment {
 
 
     private int currentSelectTab = 0;
+    public void getcountTime(int day){
+        String calls_type = EnjoyPreference.readString(getActivity(), "calls_type");
+        if (!TextUtils.isEmpty(calls_type)){
+            if (calls_type.equals("1")){
+                getMineAchievement(day);
+            }else if (calls_type.equals("3")){
+                getMineAchievementAXB(day);
+            }else if (calls_type.equals("2")){
+                getMineAchievementAXB(day);
+            }
+        }else {
+            getMineAchievementAXB(day);
+        }
+    }
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-        if(Constants.headMaster){
-            if(rl_modify_pass != null){
+        if (Constants.headMaster) {
+            if (rl_modify_pass != null) {
                 rl_modify_pass.setVisibility(View.GONE);
             }
         }
@@ -284,18 +309,18 @@ public class MainCenterFragment extends BaseFragment {
                         Calendar calendar = Calendar.getInstance();
                         Date today = new Date();
                         calendar.setTime(today);// 此处可换为具体某一时间
-                        int weekDay = calendar.get(Calendar.DAY_OF_WEEK)-1;
+                        int weekDay = calendar.get(Calendar.DAY_OF_WEEK) - 1;
                         int monthDay = calendar.get(Calendar.DAY_OF_MONTH);
                         int position = (int) view.getTag();
-                        if(position == 0){
+                        if (position == 0) {
                             currentSelectTab = 0;
-                            getMineAchievement(1);
-                        }else if(position == 1){
+                            getcountTime(1);
+                        } else if (position == 1) {
                             currentSelectTab = 1;
-                            getMineAchievement(weekDay);
-                        }else{
+                            getcountTime(weekDay);
+                        } else {
                             currentSelectTab = 2;
-                            getMineAchievement(monthDay);
+                            getcountTime(monthDay);
                         }
                     }
                 });
@@ -305,9 +330,9 @@ public class MainCenterFragment extends BaseFragment {
         }
 
 
-            if(Constants.headMaster){
+        if (Constants.headMaster) {
             rl_jilu.setVisibility(View.VISIBLE);
-            view_line4.setVisibility(View.VISIBLE);
+
             rl_jilu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -315,13 +340,25 @@ public class MainCenterFragment extends BaseFragment {
                     startActivity(intent);
                 }
             });
-        }else{
+        } else {
             rl_jilu.setVisibility(View.GONE);
-            view_line4.setVisibility(View.GONE);
+
         }
 
         getUserInfo();
-        getMineAchievement(1);
+        String calls_type = EnjoyPreference.readString(getActivity(), "calls_type");
+        if (!TextUtils.isEmpty(calls_type)){
+            if (calls_type.equals("1")){
+                getMineAchievement(1);
+            }else if (calls_type.equals("3")){
+                getMineAchievementAXB(1);
+            }else if (calls_type.equals("2")){
+                getMineAchievementAXB(1);
+            }
+        }else {
+            getMineAchievementAXB(1);
+        }
+
 
 
 
@@ -400,14 +437,14 @@ public class MainCenterFragment extends BaseFragment {
     private void getMineAchievement(int day) {
         try {
             long current = System.currentTimeMillis();
-           // long zero = current/(1000*3600*24*day)*(1000*3600*24*day) - TimeZone.getDefault().getRawOffset();
+            // long zero = current/(1000*3600*24*day)*(1000*3600*24*day) - TimeZone.getDefault().getRawOffset();
 
 
-            HashMap<String,String> keyMap = new HashMap<>();
+            HashMap<String, String> keyMap = new HashMap<>();
             keyMap.put("s_time", Util.getPastDateMills(day));
-            keyMap.put("e_time",current/1000+"");
+            keyMap.put("e_time", current / 1000 + "");
 
-            OkHttpUtils.post(getActivity(), Constants.host + "work/own_list",keyMap, new OkhttpCallback() {
+            OkHttpUtils.post(getActivity(), Constants.host + "work/own_list", keyMap, new OkhttpCallback() {
                 @Override
                 public void onBefore() {
                     super.onBefore();
@@ -427,36 +464,186 @@ public class MainCenterFragment extends BaseFragment {
                 public Object parseNetworkResponse(JSONObject job) throws
                         Exception {
 
-                            JSONArray array = job.getJSONArray("info");
-                            JSONObject object = array.getJSONObject(0);
-                            if (object != null) {
-                               Map<String,String> call = JSONUtil.getMap(object.getJSONObject("state"));
-                               Map<String,String> performance = JSONUtil.getMap(object.getJSONObject("performance"));
+                    JSONArray array = job.getJSONArray("info");
+                    JSONObject object = array.getJSONObject(0);
+                    if (object != null) {
+                        Map<String, String> call = JSONUtil.getMap(object.getJSONObject("state"));
+                        Map<String, String> performance = JSONUtil.getMap(object.getJSONObject("performance"));
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (TextUtils.isEmpty(performance.get("total_price"))) {
+                                    performance.put("total_price", "0");
+                                }
+                                if (TextUtils.isEmpty(performance.get("single"))) {
+                                    performance.put("single", "0");
+                                }
+                                if (TextUtils.isEmpty(call.get("duratioin"))) {
+                                    call.put("duratioin", "0");
+                                }
+                                if (TextUtils.isEmpty(call.get("dial"))) {
+                                    call.put("dial", "0");
+                                }
+                                int attach = Integer.valueOf(performance.get("total_price"));
+                                tv_attache.setText(new Double(attach) / new Double(100) + "");
+                                tv_attache_count.setText(performance.get("single"));//成交单数
+
+                                String duration = Util.getTime(Integer.valueOf(call.get("duratioin")));//时长
+                                tv_call_count.setText(call.get("dial"));//拨打量
+                                tv_duration.setText(duration);
+                            }
+                        });
+                    }
+                    return null;
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
+    /**
+     * 获取个人业绩
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void getMineAchievementAXB(int day) {
+        try {
+            long current = System.currentTimeMillis();
+            String jwtoken = EnjoyPreference.readString(getActivity(), "jwtoken");
+            Constants.jwtToken = jwtoken;
+            // long zero = current/(1000*3600*24*day)*(1000*3600*24*day) - TimeZone.getDefault().getRawOffset();
+
+
+           /* HashMap<String, String> keyMap = new HashMap<>();
+            keyMap.put("c_s_time", Util.getPastDateMills(day));
+            keyMap.put("c_e_time", current / 1000 + "");*/
+           String e_time=(current / 1000)+"";
+
+            okhttp3.OkHttpClient okHttpClient = new okhttp3.OkHttpClient();
+            // {"code":1,"msg":"绑定关系失败","data":"错误码: 1005, 请查寻中普ACB对接文档"}
+            okhttp3.Request request = new okhttp3.Request.Builder()
+                    .get()
+                    .addHeader("Authorization",Constants.jwtToken)//Constants.jwtToken
+                    .url(Constants.chuXin + "/token/user_time?c_s_time="+Util.getPastDateMills(day)+"&c_e_time="+e_time)
+                    .build();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    Response response = null;
+                    okHttpClient.newCall(request).enqueue(new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+                            Log.e("tag", "onFailure: " + e);
+                        }
+
+                        @Override
+                        public void onResponse(Call call, Response response) throws IOException {
+                            String result = response.body().string();
+                            try {
+                                JSONObject object = new JSONObject(result);
+                                int code = object.getInt("code");
+                                if (code==0){
+                                    JSONObject array = object.getJSONObject("data");
+                                    int talk_time = array.getInt("talk_time");
+                                    int talk_count = array.getInt("talk_count");
+                                    String duration = Util.getTime(Integer.valueOf(talk_time));//时长
+                                    getActivity().runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            tv_call_count.setText(String.valueOf(talk_count));//拨打量
+                                            tv_duration.setText(duration);
+                                        }
+                                    });
+                                }else if (code<0){
+                                    getRealToken();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                                 getActivity().runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        if(TextUtils.isEmpty(performance.get("total_price"))){
-                                            performance.put("total_price","0");
-                                        }
-                                        if(TextUtils.isEmpty(performance.get("single"))){
-                                            performance.put("single","0");
-                                        }
-                                        if(TextUtils.isEmpty(call.get("duratioin"))){
-                                            call.put("duratioin","0");
-                                        }
-                                        if(TextUtils.isEmpty(call.get("dial"))){
-                                            call.put("dial","0");
-                                        }
-                                        int attach = Integer.valueOf(performance.get("total_price"));
-                                        tv_attache.setText(new Double(attach)/new Double(100)+"");
-                                        tv_attache_count.setText(performance.get("single"));//成交单数
-
-                                        String duration = Util.getTime(Integer.valueOf(call.get("duratioin")));//时长
-                                        tv_call_count.setText(call.get("dial"));//拨打量
-                                        tv_duration.setText(duration);
+                                        Toast.makeText(getActivity(), "解析异常", Toast.LENGTH_LONG).show();
                                     }
                                 });
                             }
+
+                            Log.e("tag", "APICallRequestx_pool: " + result);
+                        }
+                    });
+                }
+            }).start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
+
+    /**
+     * 获取token
+     */
+    private void getRealToken() {
+        try {
+
+            String emp_name = EnjoyPreference.readString(getActivity(), "emp_name");//名
+            String emp_team_id = EnjoyPreference.readString(getActivity(), "emp_team_id");//组id
+            String emp_id = EnjoyPreference.readString(getActivity(), "emp_id");//坐席id
+            String url = null;
+            url = Constants.host + "team/work_d?uid=" + emp_id + "&uname=" + emp_name + "&gid=" + emp_team_id;//+ emp_team_id
+            Log.e("tag", "getRealToken: " + url);
+
+
+            OkHttpUtils.get(getActivity(), url, new OkhttpCallback() {
+                @Override
+                public void onBefore() {
+                    super.onBefore();
+                }
+
+                @Override
+                public void onFailure(String message) {
+                    Log.e("tag", "onFailure:4 " + message);
+                    Toast.makeText(getActivity(), message,
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onGetResult(Object object) {
+                }
+
+                @Override
+                public Object parseNetworkResponse(JSONObject object) throws
+                        Exception {
+                    int err = object.getInt("err");
+                    String data = object.getString("data");
+                    Log.e("tag", "parseNetworkResponse: " + object.toString());
+                    if (err == 0) {
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                EnjoyPreference.saveString(getActivity(), "jwtoken", data);
+                                Constants.jwtToken = data;
+                                if (tabLayout != null) {
+                                    Calendar calendar = Calendar.getInstance();
+                                    Date today = new Date();
+                                    calendar.setTime(today);// 此处可换为具体某一时间
+                                    int weekDay = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+                                    int monthDay = calendar.get(Calendar.DAY_OF_MONTH);
+                                    Log.i("MainCenterFragment", "点击了" + currentSelectTab);
+                                    if (currentSelectTab == 0) {
+                                        getcountTime(1);
+                                    } else if (currentSelectTab == 1) {
+                                        getcountTime(weekDay);
+                                    } else if (currentSelectTab == 2) {
+                                        getcountTime(monthDay);
+                                    }
+                                }
+                            }
+                        });
+                    } else {
+                        getRealToken();
+                    }
                     return null;
                 }
             });
@@ -469,20 +656,20 @@ public class MainCenterFragment extends BaseFragment {
 
     UserDetailInfo info;
 
-    private UserDetailInfo getUserDetail(JSONObject job) throws Exception{
-                JSONObject object = job.getJSONObject("info");
-                if (object != null) {
-                    info = JSONUtil.parser(object, UserDetailInfo.class, 0);
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            tv_user_phone.setText(info.getEmp_phone());
-                            tv_user_name.setText(info.getEmp_name());
-                            tv_xiaozu_1.setText(info.getTe_name());
-                            tv_xiangmu.setText(info.getPr_name());
-                        }
-                    });
+    private UserDetailInfo getUserDetail(JSONObject job) throws Exception {
+        JSONObject object = job.getJSONObject("info");
+        if (object != null) {
+            info = JSONUtil.parser(object, UserDetailInfo.class, 0);
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    tv_user_phone.setText(info.getEmp_phone());
+                    tv_user_name.setText(info.getEmp_name());
+                    tv_xiaozu_1.setText(info.getTe_name());
+                    tv_xiangmu.setText(info.getPr_name());
                 }
+            });
+        }
         return info;
     }
 
@@ -492,9 +679,18 @@ public class MainCenterFragment extends BaseFragment {
     }
 
 
-    @OnClick({R.id.rl_exit, R.id.rl_put_order, R.id.rl_jihui, R.id.rl_modify_pass,R.id.rl_call_history,R.id.rl_sound_local})
+    @OnClick({R.id.rl_zhongpu_history,R.id.rl_call_set, R.id.rl_set, R.id.rl_exit, R.id.rl_put_order, R.id.rl_jihui, R.id.rl_modify_pass, R.id.rl_call_history, R.id.rl_sound_local})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            //号码设置
+            case R.id.rl_call_set:
+                Intent intent1 = new Intent(getActivity(), RealPhoneActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.rl_set:
+                Intent intent = new Intent(getActivity(), SetPhoneActivity.class);
+                startActivity(intent);
+                break;
             case R.id.rl_exit:
                 /*String[] aa = new String[]{"18313869712","18313869712","18313869712","18313869712","18313869712"};
                 String aa2 = Arrays.toString(aa);*/
@@ -517,17 +713,21 @@ public class MainCenterFragment extends BaseFragment {
                 Intent callIntent = new Intent(getActivity(), MineCallHistoryActivity.class);
                 startActivity(callIntent);
                 break;
+            case R.id.rl_zhongpu_history:
+                Intent callIntent1 = new Intent(getActivity(), MineZhongHistoryActivity.class);
+                startActivity(callIntent1);
+            break;
             case R.id.rl_sound_local:
-                if(MainActivity.getSoundReocrdCount() >0){
-                    PromptManager.showMyToast("录音上传中",getContext());
-                    if(Constants.isUpdatingFile){
+                if (MainActivity.getSoundReocrdCount() > 0) {
+                    PromptManager.showMyToast("录音上传中", getContext());
+                    if (Constants.isUpdatingFile) {
                         return;
                     }
-                    if(Constants.qiniuToken != null){
+                    if (Constants.qiniuToken != null) {
                         MainActivity.initInfos(Constants.qiniuToken);
                     }
-                }else{
-                    PromptManager.showMyToast("本地暂无录音",getContext());
+                } else {
+                    PromptManager.showMyToast("本地暂无录音", getContext());
                 }
                 break;
         }
@@ -539,10 +739,14 @@ public class MainCenterFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 PromptManager.closeCustomDialog();
-                EnjoyPreference.saveString(getActivity(),"user_phone","");
-                EnjoyPreference.saveString(getActivity(),"pass","");
-                EnjoyPreference.saveString(getActivity(),"acc_token","");
-                EnjoyPreference.saveString(getActivity(),"emp_id","");
+                EnjoyPreference.saveString(getActivity(), "user_phone", "");
+                EnjoyPreference.saveString(getActivity(), "pass", "");
+                EnjoyPreference.saveString(getActivity(), "acc_token", "");
+                EnjoyPreference.saveString(getActivity(), "emp_id", "");
+                EnjoyPreference.saveString(getActivity(), "calls_zhu_phone", "");
+                EnjoyPreference.saveString(getActivity(), "calls_phone", "");
+               /* EnjoyPreference.saveString(getActivity(), "currentDay", "");
+                EnjoyPreference.saveString(getActivity(), "xnum","");*/
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();

@@ -59,7 +59,11 @@ public class Constants {
     public static String h = "https://crm.api.pxsedu.com/order/c_list";
     public static String i = "https://crm.api.pxsedu.com/login/m_major?s_id=";
 
-
+    public  static  String chuXin="http://call.chuxinjiaoyu.net";
+    public static String jwtToken="";
+    public static int GID=2006;//axb公司id
+    public static int callCard=0;
+    public static String Phone="";
   //晟龙育德
 /*   public static String host = "http://b.crm.api.bjzybx.cn/";
     public static String a = "http://b.crm.api.bjzybx.cn/login/a_get";

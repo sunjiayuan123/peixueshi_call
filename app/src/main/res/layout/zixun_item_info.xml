@@ -3,88 +3,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_60"
-    android:orientation="vertical"
-    android:background="@color/white">
-        <ImageView android:id="@+id/iv_user_call"
-            android:layout_width="@dimen/dp_35"
-            android:layout_height="@dimen/dp_35"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:focusable="false"
-            android:clickable="true"
-            android:background="@drawable/selector_home_call_user"/>
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/re_iv_user_call"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="match_parent">
 
-       <RelativeLayout android:layout_width="wrap_content"
-           android:layout_height="match_parent"
-           android:layout_marginLeft="@dimen/dp_10"
-           android:layout_centerVertical="true"
-           android:layout_toRightOf="@id/iv_user_call">
-           <TextView android:id="@+id/tv_user_number"
-               android:layout_width="wrap_content"
-               android:layout_height="@dimen/dp_34"
-               android:gravity="center_vertical"
-               android:textSize="@dimen/dp_18"
-               android:textColor="@color/common_black"
-               />
-           <ImageView
-               android:visibility="gone"
-               android:id="@+id/iv_copy_phone"
-               android:layout_width="@dimen/dp_30"
-               android:layout_height="@dimen/dp_30"
-               android:layout_marginLeft="@dimen/dp_5"
-               android:focusable="false"
-               android:clickable="true"
-               android:layout_marginTop="@dimen/dp_2"
-               android:layout_toRightOf="@id/tv_user_number"
-               android:background="@drawable/copy_phone"/>
-           <TextView android:id="@+id/tv_user_xinagmu"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textSize="@dimen/dp_16"
-               android:layout_marginBottom="@dimen/dp_5"
-               android:layout_alignParentBottom="true"
-               android:textColor="@color/common_gray"
-               android:text="职业药师"/>
-       </RelativeLayout>
-
-
-    <LinearLayout android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+    <ImageView
+        android:id="@+id/iv_user_call"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:gravity="bottom"
+        android:background="@drawable/selector_home_call_user"
+        android:clickable="true"
+        android:focusable="false" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/re_tv_user_number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/re_iv_user_call">
+
+        <TextView
+            android:id="@+id/tv_user_number"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/dp_18" />
+
+        <ImageView
+            android:id="@+id/iv_copy_phone"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toRightOf="@id/tv_user_number"
+            android:background="@drawable/copy_phone"
+            android:clickable="true"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_user_xinagmu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:text="职业药师"
+            android:textColor="@color/common_gray"
+            android:textSize="@dimen/dp_16" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:layout_marginBottom="@dimen/dp_5"
-        android:layout_alignParentRight="true">
-        <Button android:id="@+id/bt_beizhu"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_beizhu"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_25"
-            android:textColor="@color/common_black"
-            android:focusable="false"
-            android:clickable="true"
-            android:textSize="@dimen/sp_13"
             android:background="@drawable/shape_text_gray"
-            android:text="备注"/>
-        <Button android:id="@+id/bt_xiangqing"
+            android:clickable="true"
+            android:focusable="false"
+            android:text="备注"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/sp_13" />
+
+        <Button
+            android:id="@+id/bt_xiangqing"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_25"
-            android:focusable="false"
-            android:clickable="true"
-            android:textSize="@dimen/sp_13"
-            android:textColor="@color/common_black"
+            android:layout_below="@id/tv_user_number"
             android:layout_marginLeft="@dimen/dp_10"
             android:background="@drawable/shape_text_gray"
+            android:clickable="true"
+            android:focusable="false"
             android:text="详情"
-            android:layout_below="@id/tv_user_number"/>
-        <Button android:id="@+id/bt_huiku"
-            android:textColor="@color/common_red"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/sp_13" />
+
+        <Button
+            android:id="@+id/bt_huiku"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_25"
-            android:focusable="false"
-            android:clickable="true"
-            android:textSize="@dimen/sp_13"
             android:layout_marginLeft="@dimen/dp_10"
             android:background="@drawable/shape_text_red"
-            android:text="回库"/>
+            android:clickable="true"
+            android:focusable="false"
+            android:text="回库"
+            android:textColor="@color/common_red"
+            android:textSize="@dimen/sp_13" />
     </LinearLayout>
 </RelativeLayout>
 

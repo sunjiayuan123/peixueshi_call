@@ -8,9 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
-import com.werb.permissionschecker.PermissionChecker;
-
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.method.HideReturnsTransformationMethod;
@@ -39,9 +36,9 @@ import com.peixueshi.crm.utils.EnjoyPreference;
 import com.peixueshi.crm.utils.JSONUtil;
 import com.peixueshi.crm.utils.MD5Util;
 import com.peixueshi.crm.utils.PromptManager;
+import com.werb.permissionschecker.PermissionChecker;
 
 import org.json.JSONObject;
-
 
 import java.util.HashMap;
 
@@ -297,7 +294,6 @@ public class LoginActivity extends BaseActivity {
     public void initData(String phone, String passMd5) {
         paddMd = passMd5;
         try {
-            Log.e("tag", "initData: "+Constants.host + "login/login?" + "phone=" + phone + "&" + "pass=" + passMd5+"&way=2");
             OkHttpUtils.get(LoginActivity.this, Constants.host + "login/login?" + "phone=" + phone + "&" + "pass=" + passMd5+"&way=2", new OkhttpCallback() {
                 @Override
                 public void onBefore() {
@@ -387,6 +383,8 @@ public class LoginActivity extends BaseActivity {
                 EnjoyPreference.saveString(getApplicationContext(), "pass", paddMd);
                 EnjoyPreference.saveString(getApplicationContext(), "acc_token", userToken);
                 EnjoyPreference.saveString(getApplicationContext(), "emp_id", infoBean.getEmp_id() + "");
+                EnjoyPreference.saveString(getApplicationContext(), "emp_team_id", infoBean.getEmp_team_id() + "");
+                EnjoyPreference.saveString(getApplicationContext(), "emp_name", infoBean.getEmp_name() + "");
                 Toast.makeText(getApplicationContext(), "登录成功" + infoBean.getEmp_name(), Toast.LENGTH_SHORT).show();
                 int roleId = infoBean.getEmp_role_id();
                 if (roleId != 2 && roleId != 102) {

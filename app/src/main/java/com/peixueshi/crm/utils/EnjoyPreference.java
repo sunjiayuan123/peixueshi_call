@@ -58,7 +58,7 @@ public class EnjoyPreference {
         /*SharedPreferences share = context.getSharedPreferences(ENJOY_WIFI_PREF_TAG,
                 Context.MODE_PRIVATE);
         return share.getString(key, null);*/
-        return null;
+        return "";
     }
 
     public static boolean saveInt(Context context, String key, int value) {

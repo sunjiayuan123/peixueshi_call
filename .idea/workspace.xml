@@ -32,11 +32,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92c58e9-87b2-43cd-90f1-55b148e8fcd0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/android_call_peixueshi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/android_call_peixueshi.app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/arms/android_call_peixueshi.arms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/library-pulltorefresh/android_call_peixueshi.library-pulltorefresh.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/library/android_call_peixueshi.library.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -47,248 +42,22 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/android_call_langrui.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/android_call_langrui.app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/arms/android_call_langrui.arms.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/library-pulltorefresh/android_call_langrui.library-pulltorefresh.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/library/android_call_langrui.library.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/langrui/crm/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/peixueshi/crm/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/aidl/com/langrui/crm/IMyAidlInterface.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/aidl/com/peixueshi/crm/IMyAidlInterface.aidl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/activity/CaptureActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/activity/CaptureActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/decoding/CaptureActivityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/decoding/CaptureActivityHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/decoding/DecodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/decoding/DecodeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/view/ViewfinderView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/google/zxing/view/ViewfinderView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/AudioStartUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/AudioStartUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/CallServiceLister.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/CallServiceLister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/LocalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/LocalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/MyCatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/MyCatchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/OutGoingReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/OutGoingReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/RemoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/RemoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/TestActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/TestActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/TestGetCallHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/TestGetCallHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/YuXueApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/YuXueApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/AddExpressActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/AddExpressActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/DetailBeizhuActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/DetailBeizhuActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/DetailXiangqingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/DetailXiangqingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/MineCallHistoryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/MineCallHistoryActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/MineCreateChanceActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/MineCreateChanceActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/MinehandMasterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/MinehandMasterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/ModifyPassActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/ModifyPassActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/MusicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/MusicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/OrderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/OrderActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/ScanSureActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/ScanSureActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/SearchOrderResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/SearchOrderResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/ShowAllOrderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/ShowAllOrderActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/ShowExpressInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/ShowExpressInfoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/ShowSearchOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/ShowSearchOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/activity/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/SplashActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/ActivityLifecycleCallbacksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/ActivityLifecycleCallbacksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/AppLifecyclesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/AppLifecyclesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/EventBusTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/EventBusTags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/FragmentLifecycleCallbacksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/FragmentLifecycleCallbacksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/GlobalConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/GlobalConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/GlobalHttpHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/GlobalHttpHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/ResponseErrorListenerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/ResponseErrorListenerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/converter/ApiIOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/converter/ApiIOException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/converter/CodeGsonConverterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/converter/CodeGsonConverterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/converter/CodeGsonRequestBodyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/converter/CodeGsonRequestBodyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/converter/CodeGsonResponseBodyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/converter/CodeGsonResponseBodyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/inter/OkhttpCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/inter/OkhttpCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/service/DemoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/service/DemoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/utils/NetUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/utils/NetUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/utils/OkHttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/utils/OkHttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/utils/RxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/utils/RxUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/utils/SharePreferenceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/utils/SharePreferenceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/utils/SystemDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/utils/SystemDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/utils/TkyOkHttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/utils/TkyOkHttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/view/CircularImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/view/CircularImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/app/view/MaskedImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/app/view/MaskedImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/Listeners/CustomPhoneStateListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/Listeners/CustomPhoneStateListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/handler/MyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/handler/MyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/interfaces/IAudioCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/interfaces/IAudioCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/interfaces/IPhoneState.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/interfaces/IPhoneState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/service/UploadingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/service/UploadingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/utils/AudioRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/utils/AudioRecorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/utils/AudioStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/utils/AudioStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/utils/PcmToWav.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/utils/PcmToWav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/utils/TimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/utils/TimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/audio/utils/WaveHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/audio/utils/WaveHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/BaseWebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/BaseWebActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/HeaderViewPagerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/HeaderViewPagerFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/MyBaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/MyBaseAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/MyBaseArmActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/MyBaseArmActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/MyBaseArmFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/MyBaseArmFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/base/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/CallLogBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/CallLogBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/CertificateBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/CertificateBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/ChanceUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ChanceUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/DetailsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/DetailsBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/HelpSignBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/HelpSignBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/LoginData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/LoginUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/LoginUserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/NewOrderUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/NewOrderUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/NewUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/NewUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/OrderUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/OrderUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/ProClassBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ProClassBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/ProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ProjectBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/RecordEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/RecordEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/SelectDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/SelectDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/ShowZiType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ShowZiType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/StudentUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/StudentUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/SubmiteBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/SubmiteBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/TkyLoginRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/TkyLoginRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/UserDetailInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/UserDetailInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/ZiXunUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ZiXunUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/bean/kuCunUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/kuCunUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/di/CommonComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/di/CommonComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/di/CommonModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/di/CommonModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainCallFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCallFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainCenterFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCenterFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainHomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainHomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainMessageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainMessageFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainOrderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainOrderFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainRankingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainRankingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MainRankingFragmentRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainRankingFragmentRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/MineCenterAchievement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MineCenterAchievement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OneFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OneFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OneFragment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OneFragment2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OneFragmentHandMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OneFragmentHandMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OneFragmentMasterShouzi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OneFragmentMasterShouzi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OneFragmentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OneFragmentOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OneFragmentRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OneFragmentRanking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OrderWangkeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OrderWangkeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OrderXiezhuFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OrderXiezhuFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OrderXueliFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OrderXueliFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/OrderZhiquFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/OrderZhiquFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/RankingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/RankingFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/fragment/SearchOrderResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/SearchOrderResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/CreateChanceActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/CreateChanceActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/NewAddOrderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/NewAddOrderActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/NewHomeDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/NewHomeDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/NewIndentDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/NewIndentDetailActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/NewNetWorkClassActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/NewNetWorkClassActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/NewSelectTypeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/NewSelectTypeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newactivity/PaymentCodeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newactivity/PaymentCodeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newfragment/MainChanceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newfragment/MainChanceFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newfragment/NewOneFragmentOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newfragment/NewOneFragmentOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newfragment/NewOrderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newfragment/NewOrderFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/newfragment/OneChanceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/newfragment/OneChanceFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/receiver/PhoneReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/receiver/PhoneReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/service/AutoRedialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/service/AutoRedialService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/service/CommonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/service/CommonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/service/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/service/CommonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/MyViewPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/MyViewPagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/MyViewPagerAdapterOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/MyViewPagerAdapterOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopCallHistoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopCallHistoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopLeftRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopLeftRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopPhoneCallAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopPhoneCallAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopPhoneHistoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopPhoneHistoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopPhoneListenAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopPhoneListenAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopRightRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopRightRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopSelectRecycleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopSelectRecycleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopSelectXiezhuRecycleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopSelectXiezhuRecycleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopSelectXueliRecycleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopSelectXueliRecycleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopSelectZhiquRecycleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopSelectZhiquRecycleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopXiangmuDropAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopXiangmuDropAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/PopXueliRightRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/PopXueliRightRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/UserDataHandMasterListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/UserDataOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataOrderAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/UserDataRankingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataRankingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/UserDataZiAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/adapter/UserDataZiListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewEamestOtherAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewEamestOtherAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewEamestWangAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewEamestWangAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewEamestXueAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewEamestXueAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewEamesttXieAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewEamesttXieAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewHomeDetailsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewHomeDetailsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewHomeItemsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewHomeItemsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewISelectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewISelectAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewIndentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewIndentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewSelectOtherAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewSelectOtherAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewSelectWangAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewSelectWangAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewSelectXieAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewSelectXieAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewSelectXueAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewSelectXueAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewUserDataOrderAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewUserDataOrderAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NewXueliRightRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NewXueliRightRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/NeworderMsgAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/NeworderMsgAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/PopXueliLeftRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/PopXueliLeftRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/ProLeftRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/ProLeftRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/ProRightRecycleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/ProRightRecycleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/newadapter/UserChanceZiListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/newadapter/UserChanceZiListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/CircleImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/CircleImageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/CustomDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/CustomDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/CustomTransParentDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/CustomTransParentDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/ExpandableListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/ExpandableListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/LoadMoreListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/LoadMoreListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/LoadMoreListViewExpand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/LoadMoreListViewExpand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/LoadTransDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/LoadTransDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/OutPopWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/OutPopWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/SwipeRefreshView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/SwipeRefreshView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/ui/widget/TransParentDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/widget/TransParentDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/AESOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/AESOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/ActivityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/ActivityUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/Base64.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/Base64.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/BitmapUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/BitmapUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/DownLoadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/DownLoadUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/EnjoyPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/EnjoyPreference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/EnjoyPreferenceSaveCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/EnjoyPreferenceSaveCall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/GlideImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/GlideImageLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/JSONUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/JSONUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/MD5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/MatrixToImageWriterWithLogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/MatrixToImageWriterWithLogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/PhoneInfoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/PhoneInfoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/PromptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/PromptManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/QiniuUploadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/QiniuUploadManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/UriUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/UriUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/CallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/CallService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/ShapeTextView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/ShapeTextView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/CityPickerDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/CityPickerDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/ItemsRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/ItemsRange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/OnWheelChangedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/OnWheelChangedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/OnWheelClickedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/OnWheelClickedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/OnWheelScrollListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/OnWheelScrollListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/WheelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/WheelView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/adapter/AbstractWheelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/adapter/AbstractWheelAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/adapter/AbstractWheelTextAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/adapter/AbstractWheelTextAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/adapter/WheelRecycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/adapter/WheelRecycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/adapter/WheelScroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/adapter/WheelScroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/langrui/crm/view/wheel/adapter/WheelViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/view/wheel/adapter/WheelViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_choosesex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_choosesex.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_submitmsg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_submitmsg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_city_picker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_city_picker.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/activity/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/base/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ZiXunUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/bean/ZiXunUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/di/CommonComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/di/CommonComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCenterFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCenterFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/EnjoyPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/EnjoyPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_center.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_center.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_chance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_chance.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_handmaster.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_handmaster.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_order.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_ranking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_ranking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_shouzi_hand.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_one_shouzi_hand.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/include_lister_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/include_lister_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/include_title.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/include_title.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/langrui/crm/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/peixueshi/crm/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/config.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/app-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/student_item_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/student_item_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/zixun_item_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/zixun_item_info.xml" afterDir="false" />
     </list>
     <list id="4acbadf7-57fe-44a8-a3d7-d9bbafd39e63" name="Revert &quot;//jgm&quot;" comment="Revert &quot;//jgm&quot;&#10;&#10;This reverts commit fcc5851c" />
     <option name="SHOW_DIALOG" value="false" />
@@ -296,7 +65,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[c37b00f60107]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[NETNU20522104296]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -327,22 +96,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/app/build/generated/aidl_source_output_dir/debug/out/com/peixueshi/crm/IMyAidlInterface.java&#10;D:/android/yuxue/android_call_peixueshi/app/build/generated/source/buildConfig/debug/com/qiliang/crm/BuildConfig.java&#10;D:/android/yuxue/android_call_qiliang/app/build/generated/aidl_source_output_dir/debug/out/com/qiliang/crm/IMyAidlInterface.java" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\android\yuxue\android_call_qiliang\app\src\main\res\drawable-xhdpi" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\layout" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\java\com\peixueshi\crm\ui\adapter" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\java\com\peixueshi\crm\activity" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xxhdpi" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xhdpi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.mf.library.utils" />
+      <recent name="com.peixueshi.crm.bean" />
+      <recent name="com.peixueshi.crm.activity" />
+      <recent name="com.peixueshi.crm.fragment" />
+      <recent name="com.peixueshi.crm.utils" />
+      <recent name="com.peixueshi.crm.ui.adapter" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xhdpi" />
-      <recent name="D:\android\yuxue\android_call_langrui\app\src\main\res\drawable-xhdpi" />
-      <recent name="D:\android\yuxue\android_call_zhixue\app\src\main\res\drawable-xhdpi" />
-      <recent name="D:\android\yuxue\android_call_haichuang\app\src\main\res\drawable-xhdpi" />
-      <recent name="D:\android\yuxue\android_call_yuandong\app\src\main\res\drawable-xhdpi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\android\yuxue\android_call_qiliang\app\src\main\res\drawable-xhdpi" />
     </key>
   </component>
   <component name="RunManager">
@@ -457,10 +230,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1492" height="47" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626229947434" />
-    <state x="349" y="65" width="894" height="560" key="find.popup" timestamp="1626230269424">
+    <state x="349" y="65" width="894" height="560" key="find.popup" timestamp="1629449751159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="65" width="894" height="560" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1626230269424" />
+    <state x="349" y="65" width="894" height="560" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1629449751159" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1620902168445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
