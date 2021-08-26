@@ -118,9 +118,9 @@ public class RealPhoneActivity extends BaseActivity {
        if(calls_type.equals("1")){
            call_types.setText("当前拨号方式:A");
        }else if (calls_type.equals("2")){
-           call_types.setText("当前拨号方式:B");
+           call_types.setText("当前拨号方式:A");
        }else if (calls_type.equals("3")){
-           call_types.setText("当前拨号方式:C");
+           call_types.setText("当前拨号方式:B");
        }
    }
     @OnClick({R.id.lin_one,R.id.lin_two,R.id.iv_back,R.id.lin_three})

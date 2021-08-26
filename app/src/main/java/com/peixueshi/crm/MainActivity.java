@@ -163,7 +163,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
         mRadioGroup.setOnCheckedChangeListener(this);
         mRadioGroup.check(R.id.radio_home);
-        getUploadToken();
+        //录音上传
+      //  getUploadToken();
         checkVersion();
 
         handler.postDelayed(runnable, 10 * 1000);
@@ -582,18 +583,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         }
     }
 
-
+    //录音上传
     public static void initInfos(String token) {
-        //开启服务
-//        Intent intent = new Intent(this,yuxueMediaService.class);
-//        startService(intent);
-        //获取最新Token
 
-       /* if(Constants.isRunningCall){
-            return;
-        }*/
-
-        String path;
+      /*  String path;
         String phoneBrand = Build.BRAND;
         Log.d("OutGoingReceiver", "onCallStateChanged1: " + token);
         if (phoneBrand.toUpperCase().equals(Constant.HUAWEI)) {
@@ -650,7 +643,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
             }
         });
-
+*/
     }
 
 

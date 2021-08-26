@@ -305,7 +305,8 @@ public class CallServiceLister {
 
                     number = number.replaceAll(" ", "");
                     if (number.length() == 11 && number.startsWith("1")) {
-                        requestCallIdle(duration + "", number, Constants.iccID, dateLong);
+                        //录音上传
+                       // requestCallIdle(duration + "", number, Constants.iccID, dateLong);
                         //调接口
                         boolean isshouZi = Constants.isShouZi;
                         if (isshouZi) {//首咨
@@ -313,7 +314,8 @@ public class CallServiceLister {
                         } else {     //库存
                             type = 1;
                         }
-                        requestCallpofs(type, number);//挂断电话
+                        //录音上传
+                       // requestCallpofs(type, number);//挂断电话
                     }
 //                    duration>0 &&
                     if (Constants.qiniuToken != null) {
