@@ -31,7 +31,7 @@ import android.widget.Toast;
 
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
-import com.peixueshi.crm.activity.MineCallHistoryActivity;
+import com.peixueshi.crm.activity.MineZhongHistoryActivity;
 import com.peixueshi.crm.activity.OrderActivity;
 import com.peixueshi.crm.activity.SetPhoneActivity;
 import com.peixueshi.crm.app.inter.OkhttpCallback;
@@ -135,8 +135,13 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
         StudentUserInfo ziXunUserInfo = mUserList.get(position);
         //  if (isShouZi) {
         String phone = ziXunUserInfo.getCstu_phone();
-        String number = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
-        holder.tv_user_mumber.setText(number);
+        if (phone.length()==11){
+            String number = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
+            holder.tv_user_mumber.setText(number);
+        }
+
+
+
         holder.tv_login_count.setText("登录次数:" + ziXunUserInfo.getStuinfo_coun());
            /* if(!TextUtils.isEmpty(ziXunUserInfo.getCstu_note())){
                 holder.tv_beizhu.setText("备注:"+ziXunUserInfo.getCstu_note());
@@ -167,7 +172,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                 } else {
                     number = userInfo.getCstu_phone();
                 }
-                Intent intent = new Intent(activity, MineCallHistoryActivity.class);
+                Intent intent = new Intent(activity, MineZhongHistoryActivity.class);
                 intent.putExtra("phone",number);
                 activity.startActivity(intent);
             }
@@ -182,7 +187,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                 } else {
                     number = userInfo.getCstu_phone();
                 }
-                Intent intent = new Intent(activity, MineCallHistoryActivity.class);
+                Intent intent = new Intent(activity, MineZhongHistoryActivity.class);
                 intent.putExtra("phone",number);
                 activity.startActivity(intent);
             }
@@ -227,9 +232,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
 
                 }else {
                     EnjoyPreference.saveString(activity,"calls_type","3");
-                    if (!isFastClick()){
-                        getPorgectId(number);
-                    }
+                    getPorgectId(number);
                 }
                 // checkDualSim(number);
 
@@ -527,7 +530,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
 
                         }
 
-                        Log.e("tag", "APICallRequest2: " + result);
+                        Log.e("tag", "APICallRequestvvv2: " + result);
                     }
                 });
             }
@@ -688,7 +691,12 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                                 activity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        if (msg.contains("请查寻")){
+                                            String msgs=msg.replace("请查寻中普ACB对接文档","");
+                                            Toast.makeText(activity, msgs, Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
@@ -710,7 +718,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
     }
 
     public void getXNum(String emp_id,String emp_name,int p_id,String emp_team_id, String callee,String endUrl,String datatime){
-        String xnum = EnjoyPreference.readString(activity, "xnum");
+        String xnum = EnjoyPreference.readString(activity, "xnuma");
         String currentDay = EnjoyPreference.readString(activity, "currentDay");
         String jwtoken = EnjoyPreference.readString(activity, "jwtoken");
         Constants.jwtToken=jwtoken;
@@ -758,7 +766,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                                     @Override
                                     public void run() {
                                         EnjoyPreference.saveString(activity, "currentDay", datatime);
-                                        EnjoyPreference.saveString(activity, "xnum", data);
+                                        EnjoyPreference.saveString(activity, "xnuma", data);
                                         getXphone(emp_id, datatime, Constants.GID, p_id, emp_team_id, Constants.Phone, callee, data);
                                     }
                                 });
@@ -768,7 +776,12 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                                 activity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        if (msg.contains("请查寻")){
+                                            String msgs=msg.replace("请查寻中普ACB对接文档","");
+                                            Toast.makeText(activity, msgs, Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
@@ -828,7 +841,12 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                                 activity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        if (msg.contains("请查寻")){
+                                            String msgs=msg.replace("请查寻中普ACB对接文档","");
+                                            Toast.makeText(activity, msgs, Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
@@ -842,7 +860,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
                             });
                         }
 
-                        Log.e("tag", "APICallRequest2: " + result);
+                        Log.e("tag", "APICallRequestddd2: " + result);
                     }
                 });
             }

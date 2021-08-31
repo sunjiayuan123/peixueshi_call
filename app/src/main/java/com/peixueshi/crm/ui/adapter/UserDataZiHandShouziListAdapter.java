@@ -29,11 +29,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.DetailXiangqingActivity;
-import com.peixueshi.crm.activity.MineCallHistoryActivity;
+import com.peixueshi.crm.activity.MineZhongHistoryActivity;
 import com.peixueshi.crm.activity.SetPhoneActivity;
 import com.peixueshi.crm.app.inter.OkhttpCallback;
 import com.peixueshi.crm.app.utils.OkHttpUtils;
@@ -135,34 +134,40 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
         ZiXunUserInfo ziXunUserInfo = mUserList.get(position);
         if (isShouZi) {
             String phone = ziXunUserInfo.getWf_phone();
-            Log.e("tag", "getView: " + phone);
-            String number = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
-            holder.tv_user_mumber.setText(number);
-            holder.tv_xiangmu.setText(ziXunUserInfo.getWf_p_name());
-            holder.iv_copy_phone.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ClipboardManager cm = (ClipboardManager) activity.getSystemService(Context.CLIPBOARD_SERVICE);
-                    ClipData mClipData = ClipData.newPlainText("Label", phone);
-                    cm.setPrimaryClip(mClipData);
-                    PromptManager.showMyToast(phone + "已复制", activity);
-                }
-            });
+            if (phone.length()==11){
+                Log.e("tag", "getView: " + phone);
+                String number = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
+                holder.tv_user_mumber.setText(number);
+                holder.tv_xiangmu.setText(ziXunUserInfo.getWf_p_name());
+                holder.iv_copy_phone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ClipboardManager cm = (ClipboardManager) activity.getSystemService(Context.CLIPBOARD_SERVICE);
+                        ClipData mClipData = ClipData.newPlainText("Label", phone);
+                        cm.setPrimaryClip(mClipData);
+                        PromptManager.showMyToast(phone + "已复制", activity);
+                    }
+                });
+            }
+
         } else {
             String phone = ziXunUserInfo.getWp_phone();
-            Log.e("tag", "getViewsss: " + phone);
-            String number = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
-            holder.tv_user_mumber.setText(number);
-            holder.tv_xiangmu.setText(ziXunUserInfo.getWp_pname());
-            holder.iv_copy_phone.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ClipboardManager cm = (ClipboardManager) activity.getSystemService(Context.CLIPBOARD_SERVICE);
-                    ClipData mClipData = ClipData.newPlainText("Label", phone);
-                    cm.setPrimaryClip(mClipData);
-                    PromptManager.showMyToast(phone + "已复制", activity);
-                }
-            });
+            if (phone.length()==11){
+                Log.e("tag", "getViewsss: " + phone);
+                String number = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
+                holder.tv_user_mumber.setText(number);
+                holder.tv_xiangmu.setText(ziXunUserInfo.getWp_pname());
+                holder.iv_copy_phone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ClipboardManager cm = (ClipboardManager) activity.getSystemService(Context.CLIPBOARD_SERVICE);
+                        ClipData mClipData = ClipData.newPlainText("Label", phone);
+                        cm.setPrimaryClip(mClipData);
+                        PromptManager.showMyToast(phone + "已复制", activity);
+                    }
+                });
+            }
+
         }
 
 
@@ -449,7 +454,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                                         beizhu("work/pool_record?", work_id, phone, false);
                                     }
                                 } else {
-                                    Intent intent = new Intent(activity, MineCallHistoryActivity.class);
+                                    Intent intent = new Intent(activity, MineZhongHistoryActivity.class);
                                     intent.putExtra("phone", phone);
                                     activity.startActivity(intent);
                                 }
@@ -616,7 +621,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
 
                         }
 
-                        Log.e("tag", "APICallRequest2: " + result);
+                        Log.e("tag", "APICallRequestnnnnnnn2: " + result);
                     }
                 });
             }
@@ -777,7 +782,12 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                                 activity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        if (msg.contains("请查寻")){
+                                            String msgs=msg.replace("请查寻中普ACB对接文档","");
+                                            Toast.makeText(activity, msgs, Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
@@ -799,7 +809,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
     }
 
     public void getXNum(String emp_id, String emp_name, int p_id, String emp_team_id, String callee, String endUrl, String datatime) {
-        String xnum = EnjoyPreference.readString(activity, "xnum");
+        String xnum = EnjoyPreference.readString(activity, "xnuma");
         String currentDay = EnjoyPreference.readString(activity, "currentDay");
         if (!TextUtils.isEmpty(xnum) && !TextUtils.isEmpty(currentDay)) {
             if (datatime.equals(currentDay)) {
@@ -842,7 +852,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                                     @Override
                                     public void run() {
                                         EnjoyPreference.saveString(activity, "currentDay", datatime);
-                                        EnjoyPreference.saveString(activity, "xnum", data);
+                                        EnjoyPreference.saveString(activity, "xnuma", data);
                                         getXphone(emp_id, datatime, Constants.GID, p_id, emp_team_id, Constants.Phone, callee, data);
                                     }
                                 });
@@ -852,7 +862,12 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                                 activity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        if (msg.contains("请查寻")){
+                                            String msgs=msg.replace("请查寻中普ACB对接文档","");
+                                            Toast.makeText(activity, msgs, Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
@@ -914,7 +929,12 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                                 activity.runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        if (msg.contains("请查寻")){
+                                            String msgs=msg.replace("请查寻中普ACB对接文档","");
+                                            Toast.makeText(activity, msgs, Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
+                                        }
                                     }
                                 });
                             }
@@ -928,7 +948,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                             });
                         }
 
-                        Log.e("tag", "APICallRequest2: " + result);
+                        Log.e("tag", "APICallRequestvff2: " + result);
                     }
                 });
             }

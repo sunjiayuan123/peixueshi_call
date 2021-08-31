@@ -140,8 +140,8 @@ public class RealPhoneActivity extends BaseActivity {
                 test_two.setTextColor(getResources().getColor(R.color.font_6882fd));
                 test_one.setTextColor(getResources().getColor(R.color.font_666666));
                 test_three.setTextColor(getResources().getColor(R.color.font_666666));
-                EnjoyPreference.saveString(RealPhoneActivity.this, "currentDay", "");
-                EnjoyPreference.saveString(RealPhoneActivity.this, "xnum","");
+              //  EnjoyPreference.saveString(RealPhoneActivity.this, "currentDay", "");
+              //  EnjoyPreference.saveString(RealPhoneActivity.this, "xnum","");
                 setImageBackground(image_two,image_one,image_three);
                 setType();
                 break;
@@ -150,8 +150,8 @@ public class RealPhoneActivity extends BaseActivity {
                 test_three.setTextColor(getResources().getColor(R.color.font_6882fd));
                 test_one.setTextColor(getResources().getColor(R.color.font_666666));
                 test_two.setTextColor(getResources().getColor(R.color.font_666666));
-                EnjoyPreference.saveString(RealPhoneActivity.this, "currentDay", "");
-                EnjoyPreference.saveString(RealPhoneActivity.this, "xnum","");
+             //   EnjoyPreference.saveString(RealPhoneActivity.this, "currentDay", "");
+             //   EnjoyPreference.saveString(RealPhoneActivity.this, "xnum","");
                 setImageBackground(image_three,image_one,image_two);
                 setType();
 

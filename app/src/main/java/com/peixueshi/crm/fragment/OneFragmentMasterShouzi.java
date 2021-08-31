@@ -146,7 +146,7 @@ public class OneFragmentMasterShouzi extends Fragment implements PullDownView.Up
             recycle_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    if(position>=userInfos.size()){//刷新条 执行加载更多
+                /*    if(position>=userInfos.size()){//刷新条 执行加载更多
                         return;
                     }
                    ZiXunUserInfo userInfo = userInfos.get(position);
@@ -158,7 +158,7 @@ public class OneFragmentMasterShouzi extends Fragment implements PullDownView.Up
                     }
                     Intent intent = new Intent(getActivity(), MineCallHistoryActivity.class);
                     intent.putExtra("phone",number);
-                    getActivity().startActivity(intent);
+                    getActivity().startActivity(intent);*/
                 }
             });
         }

@@ -82,6 +82,12 @@ public class MainCenterFragment extends BaseFragment {
     TextView tv_xiaozu_1;
     @BindView(R.id.tv_xiangmu)
     TextView tv_xiangmu;
+
+    @BindView(R.id.tv_rate)
+    TextView tv_rate;
+    @BindView(R.id.tv_connect_count)
+    TextView tv_connect_count;
+
     @BindView(R.id.rl_jihui)
     RelativeLayout rl_jihui;
     @BindView(R.id.rl_exit)
@@ -548,12 +554,16 @@ public class MainCenterFragment extends BaseFragment {
                                     JSONObject array = object.getJSONObject("data");
                                     int talk_time = array.getInt("talk_time");
                                     int talk_count = array.getInt("talk_count");
+                                    int connect_count = array.getInt("connect_count");
                                     String duration = Util.getTime(Integer.valueOf(talk_time));//时长
+                                    String connectNum = Util.getConnectNum(connect_count, talk_count);
                                     getActivity().runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
                                             tv_call_count.setText(String.valueOf(talk_count));//拨打量
                                             tv_duration.setText(duration);
+                                            tv_connect_count.setText(String.valueOf(connect_count));
+                                            tv_rate.setText(connectNum);
                                         }
                                     });
                                 }else if (code<0){
@@ -717,7 +727,7 @@ public class MainCenterFragment extends BaseFragment {
                 Intent callIntent1 = new Intent(getActivity(), MineZhongHistoryActivity.class);
                 startActivity(callIntent1);
             break;
-            case R.id.rl_sound_local:
+            case R.id.rl_sound_local://录音上传
                 if (MainActivity.getSoundReocrdCount() > 0) {
                     PromptManager.showMyToast("录音上传中", getContext());
                     if (Constants.isUpdatingFile) {
@@ -745,6 +755,7 @@ public class MainCenterFragment extends BaseFragment {
                 EnjoyPreference.saveString(getActivity(), "emp_id", "");
                 EnjoyPreference.saveString(getActivity(), "calls_zhu_phone", "");
                 EnjoyPreference.saveString(getActivity(), "calls_phone", "");
+                EnjoyPreference.saveString(getActivity(), "jwtoken","");
                /* EnjoyPreference.saveString(getActivity(), "currentDay", "");
                 EnjoyPreference.saveString(getActivity(), "xnum","");*/
                 Intent intent = new Intent(getActivity(), LoginActivity.class);

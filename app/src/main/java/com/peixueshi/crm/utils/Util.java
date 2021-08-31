@@ -24,6 +24,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -320,7 +321,21 @@ public class Util {
         dateTime = simpleDateFormat.format(new Date(timeLong * 1000L));
         return dateTime;
     }*/
-
+    public static String getConnectNum(int num,int count){
+        String distanceString="";
+        if (num==0||count==0){
+            distanceString="0%";
+        }else {
+            float distanceValue =(float)num/count;
+            Log.e("tag", "getConnectNum: "+distanceValue );
+            DecimalFormat decimalFormat =new DecimalFormat("0.00");//构造方法的字符格式这里如果小数不足2位,会以0补足.
+            distanceString = decimalFormat.format(distanceValue)+"";//format 返回的是字符串
+            float distanceValues=Float.valueOf(distanceString)*100;
+            DecimalFormat decimalFormat1 =new DecimalFormat("0");
+            distanceString = decimalFormat1.format(distanceValues)+"%";
+        }
+        return distanceString;
+    }
     //根据秒数转化为时分秒   00:00:00
     public static String getTime(int second) {
         if (second < 10) {

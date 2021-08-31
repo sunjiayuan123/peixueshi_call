@@ -100,6 +100,9 @@ public class MineZhongHistoryActivity extends BaseActivity implements PullDownVi
 
         setRefresh();
         callPhone = getIntent().getStringExtra("phone");
+        if (callPhone==null){
+            callPhone="";
+        }
         getCallHistory();
       /*  recycle_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -199,10 +202,10 @@ public class MineZhongHistoryActivity extends BaseActivity implements PullDownVi
             String reqUrl;
             if (isLoadMore) {
                 page++;
-                reqUrl = Constants.chuXin + "/token/voide_list" + "?page=" + page;
+                reqUrl = Constants.chuXin + "/token/voide_list" + "?page=" + page+"&targe="+callPhone;
             } else {
                 page = 1;
-                reqUrl = Constants.chuXin + "/token/voide_list" + "?page=1";
+                reqUrl = Constants.chuXin + "/token/voide_list" + "?page=1"+"&targe="+callPhone;
             }
             String emp_name = EnjoyPreference.readString(MineZhongHistoryActivity.this, "emp_name");//名
             reqUrl = reqUrl + "&name=" + emp_name + "&count=" + 10;
@@ -246,10 +249,10 @@ public class MineZhongHistoryActivity extends BaseActivity implements PullDownVi
         String reqUrl;
         if (isLoadMore) {
             page++;
-            reqUrl = Constants.chuXin + "/token/voide_list" + "?page=" + page;
+            reqUrl = Constants.chuXin + "/token/voide_list" + "?page=" + page+"&targe="+callPhone;
         } else {
             page = 1;
-            reqUrl = Constants.chuXin + "/token/voide_list" + "?page=1";
+            reqUrl = Constants.chuXin + "/token/voide_list" + "?page=1"+"&targe="+callPhone;
         }
         String emp_name = EnjoyPreference.readString(MineZhongHistoryActivity.this, "emp_name");//名
         reqUrl = reqUrl + "&name=" + emp_name + "&count=" + 10;

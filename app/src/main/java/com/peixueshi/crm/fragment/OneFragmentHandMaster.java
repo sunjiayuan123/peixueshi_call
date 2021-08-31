@@ -88,10 +88,10 @@ public class OneFragmentHandMaster extends Fragment implements PullDownView.Upda
       recycle_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
           @Override
           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-              String phone = userInfos.get(position).getCstu_phone();
+           /*   String phone = userInfos.get(position).getCstu_phone();
               Intent intent = new Intent(getActivity(), MineCallHistoryActivity.class);
               intent.putExtra("phone",phone);
-              getActivity().startActivity(intent);
+              getActivity().startActivity(intent);*/
           }
       });
         initData(isShengji,"");
