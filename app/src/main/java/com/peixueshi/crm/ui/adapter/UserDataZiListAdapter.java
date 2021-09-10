@@ -407,10 +407,7 @@ public class UserDataZiListAdapter extends BaseAdapter {
                 Constants.Phone = calls_zhu_phone;
             }
         }
-        if (!TextUtils.isEmpty(nativePhoneNumber) && simNumber == 1) {
-            Constants.Phone = nativePhoneNumber;
-            EnjoyPreference.saveString(activity, "calls_zhu_phone", phone + "");
-        }
+
         if (!TextUtils.isEmpty(phone) && !TextUtils.isEmpty(calls_zhu_phone) && simNumber == 2) {
             if (Constants.callCard == 0) {
                 Constants.Phone = calls_zhu_phone;
