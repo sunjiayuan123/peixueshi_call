@@ -41,8 +41,8 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:singleLine="true"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="@color/btn_gray"
                 android:textCursorDrawable="@drawable/my_cursor"
                 android:textSize="16sp" />
 

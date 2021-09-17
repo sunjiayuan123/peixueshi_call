@@ -23,6 +23,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.base.Constants;
 import com.peixueshi.crm.ui.widget.CustomDialog;
@@ -418,7 +419,39 @@ public class PromptManager {
         pop_select.showAtLocation(parent, Gravity.CENTER, x, y);
 
     }
+    public static synchronized void showPopViewbb(View view, View dropof,Activity activity) {
+        pop_select = new PopupWindow(view, dropof.getWidth(), 400, true);
+        pop_select.setBackgroundDrawable(new ColorDrawable(0x00000000));
+        // pop_select.showAsDropDown(dropof, 0, 0);
+        pop_select.setAnimationStyle(R.style.PopupWindowAnimStyle);
+        if (Build.VERSION.SDK_INT >= 24) {
+            int[] point = new int[2];
+            dropof.getLocationInWindow(point);
+            pop_select.showAtLocation(activity.getWindow().getDecorView(), Gravity.NO_GRAVITY, point[0], point[1] + dropof.getHeight()+20);
+        } else {
+            pop_select.showAsDropDown(dropof);
+        }
+       /* if(popDrop==null){
+            popDrop=new PopupWindow(activity);
+            popDrop.setWidth(dropof.getWidth());
+            popDrop.setHeight(280);
+            popDrop.setAnimationStyle(R.style.PopupWindowAnimStyle);
+            popDrop.setFocusable(true);
+            popDrop.setTouchable(true);
+            popDrop.setBackgroundDrawable(
+                    new ColorDrawable(ContextCompat.getColor(activity,R.color.colorPrimary)));
+            View v=new View(activity);
+            v.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT));
+            popDrop.setContentView(v);
+        }
+        if(!popDrop.isShowing()){
+            int[] position=new int[2];
+            view.getLocationOnScreen(position);
+            popDrop.showAtLocation(view, Gravity.NO_GRAVITY,position[0],
+                    position[1]+ view.getHeight());
+        }*/
 
+    }
     public static synchronized void showPopView(View view, View dropof,Activity activity) {
         pop_select = new PopupWindow(view, dropof.getWidth(),
                 LinearLayout.LayoutParams.WRAP_CONTENT, true);
