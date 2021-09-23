@@ -29,6 +29,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.DetailXiangqingActivity;
@@ -104,6 +105,7 @@ public class UserDataZiListAdapter extends BaseAdapter {
     };
     public static String localCallNumber;
     private int wp_id;
+    private int oneShouZi;
 
 
     @Override
@@ -378,12 +380,14 @@ public class UserDataZiListAdapter extends BaseAdapter {
         Constants.jwtToken = jwtoken;
 
         if (TextUtils.isEmpty(phone) && TextUtils.isEmpty(calls_zhu_phone)) {
+            Log.e("tag", "APICallRequestfffv: "+phone+"=="+calls_zhu_phone );
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(activity, SetPhoneActivity.class);
             activity.startActivity(intent);
             return;
         }
         if (simNumber == 1 && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(calls_zhu_phone)) {
+            Log.e("tag", "APICallRequestvvv: "+phone+"=="+calls_zhu_phone );
             EnjoyPreference.saveString(activity, "calls_phone", "");
             EnjoyPreference.saveString(activity, "calls_zhu_phone", "");
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
@@ -391,6 +395,7 @@ public class UserDataZiListAdapter extends BaseAdapter {
             activity.startActivity(intent);
             return;
         } else if (simNumber == 2 && (TextUtils.isEmpty(phone) || TextUtils.isEmpty(calls_zhu_phone))) {
+            Log.e("tag", "APICallRequestbbbv: "+phone+"=="+calls_zhu_phone );
             EnjoyPreference.saveString(activity, "calls_phone", "");
             EnjoyPreference.saveString(activity, "calls_zhu_phone", "");
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
@@ -613,7 +618,14 @@ public class UserDataZiListAdapter extends BaseAdapter {
     public void getXphone(String u_id, String datatime, int c_id, int p_id, String emp_team_id, String a_num, String callee, String xnum) {
         //+"&xnum="+phone
         //  String endUrl = "u_id=" + u_id + "&u_name=" + emp_name + "&c_id=" + c_id + "&p_id=" + p_id + "&g_id=" + emp_team_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
-        String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
+        if (isShouZi){
+            oneShouZi = 1;
+        }else if (!isShouZi){
+            oneShouZi = 2;
+        }else {
+            oneShouZi=0;
+        }
+        String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum+"&one="+oneShouZi;
 
         Log.e("tag", "APICallRequest: " + endUrl);
         okhttp3.OkHttpClient okHttpClient = new okhttp3.OkHttpClient();
@@ -724,8 +736,8 @@ public class UserDataZiListAdapter extends BaseAdapter {
                                         }
 
                                     } else {
-                                        EnjoyPreference.saveString(activity, "calls_type", "1");
-                                        checkDualSim(phone);
+                                        EnjoyPreference.saveString(activity, "calls_type", "3");
+                                        getRealTime(phone, wp_id);
                                     }
                                     // checkDualSim(phone);
                                 } else if (check == 2) {//备注

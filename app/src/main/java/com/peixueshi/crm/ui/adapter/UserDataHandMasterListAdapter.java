@@ -29,6 +29,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.MineZhongHistoryActivity;
@@ -105,6 +106,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
         }
     };
     public static String localCallNumber;
+    private int oneShouZi;
 
     @Override
     public int getCount() {
@@ -567,12 +569,14 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
         Constants.jwtToken=jwtoken;
 
         if (TextUtils.isEmpty(phone) && TextUtils.isEmpty(calls_zhu_phone)) {
+            Log.e("tag", "APICallReqrrrrrrrruestv: "+phone+"=="+calls_zhu_phone );
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(activity, SetPhoneActivity.class);
             activity.startActivity(intent);
             return;
         }
         if (simNumber == 1 && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(calls_zhu_phone)) {
+            Log.e("tag", "APICallRequegggggggstv: "+phone+"=="+calls_zhu_phone );
             EnjoyPreference.saveString(activity, "calls_phone", "");
             EnjoyPreference.saveString(activity, "calls_zhu_phone", "");
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
@@ -580,6 +584,7 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
             activity.startActivity(intent);
             return;
         } else if (simNumber == 2 && (TextUtils.isEmpty(phone) || TextUtils.isEmpty(calls_zhu_phone))) {
+            Log.e("tag", "APICallRequestbbbbv: "+phone+"=="+calls_zhu_phone );
             EnjoyPreference.saveString(activity, "calls_phone", "");
             EnjoyPreference.saveString(activity, "calls_zhu_phone", "");
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
@@ -800,7 +805,15 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
     }
     public void getXphone(String u_id, String datatime, int c_id, int p_id, String emp_team_id, String a_num, String callee, String xnum) {
         //+"&xnum="+phone
-        String endUrl =  "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
+        if (isShouZi){
+            oneShouZi = 4;
+        }else if (!isShouZi){
+            oneShouZi = 3;
+        }else {
+            oneShouZi=0;
+        }
+        String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum+"&one="+oneShouZi;
+       // String endUrl =  "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
 
        // String endUrl = "u_id=" + u_id + "&u_name=" + emp_name + "&c_id=" + c_id + "&p_id=" + p_id + "&g_id=" + emp_team_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
         Log.e("tag", "APICallRequest: " + endUrl);

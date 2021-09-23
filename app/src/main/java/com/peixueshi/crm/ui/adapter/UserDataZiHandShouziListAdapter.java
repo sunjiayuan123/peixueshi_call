@@ -103,6 +103,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
     };
     public static String localCallNumber;
     private int wp_id;
+    private int oneShouZi;
 
 
     @Override
@@ -441,8 +442,8 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
                                         }
 
                                     } else {
-                                        EnjoyPreference.saveString(activity, "calls_type", "1");
-                                        checkDualSim(phone);
+                                        EnjoyPreference.saveString(activity, "calls_type", "3");
+                                        getRealTime(phone, wp_id);
                                     }
 
                                     //  checkDualSim(phone);
@@ -659,12 +660,14 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
         Constants.jwtToken=jwtoken;
 
         if (TextUtils.isEmpty(phone) && TextUtils.isEmpty(calls_zhu_phone)) {
+            Log.e("tag", "APICallRequestv: "+phone+"=="+calls_zhu_phone );
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(activity, SetPhoneActivity.class);
             activity.startActivity(intent);
             return;
         }
         if (simNumber == 1 && !TextUtils.isEmpty(phone) && !TextUtils.isEmpty(calls_zhu_phone)) {
+            Log.e("tag", "APICallRequest:c "+phone+"=="+calls_zhu_phone );
             EnjoyPreference.saveString(activity, "calls_phone", "");
             EnjoyPreference.saveString(activity, "calls_zhu_phone", "");
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
@@ -672,6 +675,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
             activity.startActivity(intent);
             return;
         } else if (simNumber == 2 && (TextUtils.isEmpty(phone) || TextUtils.isEmpty(calls_zhu_phone))) {
+            Log.e("tag", "APICallRequestbb: "+phone+"=="+calls_zhu_phone );
             EnjoyPreference.saveString(activity, "calls_phone", "");
             EnjoyPreference.saveString(activity, "calls_zhu_phone", "");
             Toast.makeText(activity, "手机号为空请先保存", Toast.LENGTH_SHORT).show();
@@ -714,7 +718,6 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
         // int p_id = 1003004;                                                                                                               //17320833955
         //String endUrl = "u_id=" + emp_id + "&u_name=" + emp_name + "&c_id=" + c_id + "&p_id=" + p_id + "&g_id=" + emp_team_id + "&a_num=" + Constants.Phone + "&b_num=" + callee;
         String endUrl = "u_id=" + emp_id + "&c_id=" + Constants.GID;
-        Log.e("tag", "APICallRequest: " + endUrl);
         String calls_type = EnjoyPreference.readString(activity, "calls_type");
         Log.e("tag", "APICallRequest: " + calls_type+"===="+endUrl);
         if (calls_type.equals("2")){
@@ -887,7 +890,15 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
 
     public void getXphone(String u_id, String datatime, int c_id, int p_id, String emp_team_id, String a_num, String callee, String xnum) {
         //+"&xnum="+phone
-        String endUrl = "c_id=" + c_id + "&p_id=" + p_id +  "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
+        if (isShouZi){
+            oneShouZi = 1;
+        }else if (!isShouZi){
+            oneShouZi = 2;
+        }else {
+            oneShouZi=3;
+        }
+        String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum+"&one="+oneShouZi;
+      //  String endUrl = "c_id=" + c_id + "&p_id=" + p_id +  "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
 
      //   String endUrl = "u_id=" + u_id + "&u_name=" + emp_name + "&c_id=" + c_id + "&p_id=" + p_id + "&g_id=" + emp_team_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
         Log.e("tag", "APICallRequest: " + endUrl);

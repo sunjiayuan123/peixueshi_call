@@ -43,6 +43,7 @@ import com.peixueshi.crm.app.utils.OkHttpUtils;
 import com.peixueshi.crm.base.Constants;
 import com.peixueshi.crm.di.CommonModule;
 import com.peixueshi.crm.di.DaggerCommonComponent;
+import com.peixueshi.crm.ui.adapter.PopLeiXingDropAdapter;
 import com.peixueshi.crm.ui.adapter.PopXiangmuDropAdapter;
 import com.peixueshi.crm.utils.EnjoyPreference;
 import com.peixueshi.crm.utils.JSONUtil;
@@ -55,6 +56,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -115,6 +117,8 @@ public class MainCallFragment extends BaseFragment {
     Unbinder unbinder;
     @BindView(R.id.lin_call)
     LinearLayout linCall;
+    @BindView(R.id.leixing)
+    EditText leixing;
     Unbinder unbinder1;
     private String all = "";
     private int COUN_CALL = 20;//拨打量
@@ -126,6 +130,7 @@ public class MainCallFragment extends BaseFragment {
     private PhoneAccountHandle phoneAccountHandle;
     private String localCallNumber;
     String pid = "0";
+    private List<String> leixingList;
 
     public MainCallFragment() {
         // Required empty public constructor
@@ -177,8 +182,9 @@ public class MainCallFragment extends BaseFragment {
                 return true;
             }
         });
-    }
 
+    }
+    int leixings=0;
     @Override
     public void setData(@Nullable Object data) {
     }
@@ -194,7 +200,8 @@ public class MainCallFragment extends BaseFragment {
             clickPos = -1;
             et_xiangmu.setText("");
             et_xiangmu.setHint("请选择项目");
-
+            leixing.setText("");
+            leixing.setHint("请选择号码位置");
         }
     }
 
@@ -230,7 +237,7 @@ public class MainCallFragment extends BaseFragment {
         }
     }
 
-    @OnClick({R.id.et_xiangmu, R.id.tv_text2, R.id.bt_delete, R.id.bt_one, R.id.bt_two, R.id.bt_three, R.id.bt_four, R.id.bt_five, R.id.bt_six, R.id.bt_seven, R.id.bt_eight, R.id.bt_nine, R.id.bt_star, R.id.bt_zero, R.id.bt_bottom, R.id.bt_function, R.id.bt_call, R.id.bt_all})
+    @OnClick({R.id.leixing,R.id.et_xiangmu, R.id.tv_text2, R.id.bt_delete, R.id.bt_one, R.id.bt_two, R.id.bt_three, R.id.bt_four, R.id.bt_five, R.id.bt_six, R.id.bt_seven, R.id.bt_eight, R.id.bt_nine, R.id.bt_star, R.id.bt_zero, R.id.bt_bottom, R.id.bt_function, R.id.bt_call, R.id.bt_all})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_text2:
@@ -324,6 +331,9 @@ public class MainCallFragment extends BaseFragment {
                     initXiangmu();
                 }
                 break;
+            case R.id.leixing:
+                showLeiXing();
+                break;
             case R.id.bt_call:
                 String phone = tvText2.getText().toString();
                 Log.e("tag", "onViewClicked: " + phone);
@@ -411,7 +421,7 @@ public class MainCallFragment extends BaseFragment {
 
         }
     }
-
+    PopLeiXingDropAdapter popLeiXingDropAdapter;
     PopXiangmuDropAdapter popXiangmuDropAdapter;
     List<Map<String, String>> listXiangmu;
 
@@ -453,6 +463,40 @@ public class MainCallFragment extends BaseFragment {
                     }*/
             //  getPIdInfo(listXiangmu,p_id);
         }
+    }
+
+    private void showLeiXing() {
+        leixingList = new ArrayList<>();
+        leixingList.add("未知");
+        leixingList.add("首咨");
+        leixingList.add("库存");
+        leixingList.add("未升班");
+        leixingList.add("已升班");
+        View view = View.inflate(activity, R.layout.ll_xiangmu_drop, null);
+        RecyclerView recyclerView = view.findViewById(R.id.rv_drop);
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
+        recyclerView.addItemDecoration(new DividerItemDecoration(activity, DividerItemDecoration.VERTICAL));
+        recyclerView.setLayoutManager(layoutManager1);
+        if (popLeiXingDropAdapter == null) {//leixingList
+            popLeiXingDropAdapter = new PopLeiXingDropAdapter(activity, leixingList);
+            popLeiXingDropAdapter.setData(leixingList);
+            recyclerView.setAdapter(popLeiXingDropAdapter);
+            popLeiXingDropAdapter.notifyDataSetChanged();
+        } else {
+            popLeiXingDropAdapter.setData(leixingList);
+            recyclerView.setAdapter(popLeiXingDropAdapter);
+            popLeiXingDropAdapter.notifyDataSetChanged();
+        }
+        popLeiXingDropAdapter.setOnItemClickListener(new PopLeiXingDropAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClickListener(int pos) {
+                String s = leixingList.get(pos);
+                leixings = pos;
+                leixing.setText(s);
+                PromptManager.closePopWindow();
+            }
+        });
+        PromptManager.showPopViewbb(view, leixing, activity);
     }
 
     private int clickPos = -1;
@@ -895,7 +939,7 @@ public class MainCallFragment extends BaseFragment {
     public void getXphone(String u_id, String datatime, int c_id, int p_id, String emp_team_id, String a_num, String callee, String xnum) {
         //+"&xnum="+phone
         //  String endUrl = "u_id=" + u_id + "&u_name=" + emp_name + "&c_id=" + c_id + "&p_id=" + p_id + "&g_id=" + emp_team_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
-        String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
+        String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum+"&one="+leixings;
 
         Log.e("tag", "APICallRequest: " + endUrl);
         OkHttpClient okHttpClient = new OkHttpClient();

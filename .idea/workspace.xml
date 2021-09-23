@@ -32,19 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92c58e9-87b2-43cd-90f1-55b148e8fcd0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCallFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCallFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/PromptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/utils/PromptManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_call.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_call.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/pxscrm.apk" beforeDir="false" afterPath="$PROJECT_DIR$/release/pxscrm.apk" afterDir="false" />
     </list>
     <list id="4acbadf7-57fe-44a8-a3d7-d9bbafd39e63" name="Revert &quot;//jgm&quot;" comment="Revert &quot;//jgm&quot;&#10;&#10;This reverts commit fcc5851c" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +75,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/app/build/generated/aidl_source_output_dir/debug/out/com/peixueshi/crm/IMyAidlInterface.java&#10;D:/android/yuxue/android_call_peixueshi/app/build/generated/source/buildConfig/debug/com/qiliang/crm/BuildConfig.java&#10;D:/android/yuxue/android_call_qiliang/app/build/generated/aidl_source_output_dir/debug/out/com/qiliang/crm/IMyAidlInterface.java" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">

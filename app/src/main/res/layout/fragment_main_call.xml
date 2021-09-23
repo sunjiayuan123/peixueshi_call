@@ -20,7 +20,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/re_phone"
+       android:id="@+id/re_phone"
         android:layout_below="@+id/rl_title_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,6 +98,40 @@
 
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/rl_xiangmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="20dp">
+        <TextView android:text="号码位置:"
+            android:id="@+id/tv_xiangmus"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/text_common_balck"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dp_30"/>
+        <EditText
+            android:id="@+id/leixing"
+            android:hint="请选择位置"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:textCursorDrawable="@drawable/my_cursor"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/tv_xiangmus"
+            android:textSize="@dimen/dp_16"
+            android:padding="@dimen/dp_10"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/btn_edittext_corner"
+            android:layout_height="@dimen/dp_40"/>
+
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/lin_call"
         android:layout_centerInParent="true"
@@ -120,7 +154,7 @@
                 android:id="@+id/bt_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+               />
 
             <ImageView
                 android:adjustViewBounds="true"
@@ -163,7 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@mipmap/five"
-                />
+               />
 
             <ImageView
                 android:adjustViewBounds="true"
