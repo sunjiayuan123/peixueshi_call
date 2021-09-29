@@ -31,7 +31,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
-        android:name="com.peixueshi.crm.YuXueApplication"
+        android:name=".SophixStubApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon_xiaoguan"
         android:label="@string/app_name"
@@ -48,7 +48,15 @@
         <activity android:name="com.peixueshi.crm.newactivity.NewNetWorkClassActivity" />
         <activity android:name="com.peixueshi.crm.newactivity.CreateChanceActivity" />
         <activity android:name="com.peixueshi.crm.newactivity.NewAddOrderActivity" />
-
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="333539857-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="bf4f3df15f5643298a7167584ff6c486" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAcb2AFmO+DlBR1FO7jUvh+pkegJB4p3Z+FW0s2A1XLjEI/jdlDjp+3kzrlb4Y+lfGf03uUjB6THvSwM6wnfG27IL+R+ztBaYb8QF98ev4FEVun/FP39AAigfCi9YqRu0ijz0TW3gyXEqNamPzWNXkK1djeeqFczmDEsv+tPt9vL3E/r4pVfFtOoCvCMhSwS7KpEhzK8mOr8k2HyVRLfjYcz6IjbqGo5eJzr2tlL+JRZiIA0Jld03OdF/ISXViGKCyMsF15UcK+dp9XLWRjluo+FcZAfjJS/IMohZ35LI1vksJ27V8QM/uR+yUWrwEggzUDbEqwY7mvzz46rFvcJLhAgMBAAECggEBAKumyDhvwBfN/KaAlQ89QOoX9GvYkQSNmotr4S2WqI+Si/pRhmeFAXgYINQhhKYS5igPdRuWA9eSUP/zKmku+GMJIu5ciWABIeDaX1JPbwKgUi4SS9PK9mUEuVc2E5kyGmIxEXEqrVN+LqFkvDJakq4qWpBINn9B/5KCOaK/G3NSTykKeC+2hvv+78qRuV36LpLgD7urbrgeOz3/YpJYzdeTw59JAG5wxWytRAYyd1YZxYdty2QFeCENI0rnFX1c0SgrMpZ1mSncOoeqrIhiRrHVMptVkqqrXzwrhmzdlfHrwMR23p9CGFqADmEwXcVLhbOxoDqtocakrUNayX2skuECgYEA/UMkXC37h6RMeK3HNjy5YGUoETxLuMVMiwz75swjFDXB0/dShcM78Gh5SnqFDj8MIk2tvHl/0NCfUxgI2ahARC5+9dLCOPGxVDtTqV5oQoVGwh/b3iyrCab3ZgNj7u3jt5EJa7jtgi5oIJ4sgRXQEOp8Ieozu7KBP3fu3mjFjIsCgYEAwoZLnDNGRhu58+xeYxsGYolv3zmzAA85vyz64attD2BdbHIik+unnBIDAoMWbhcse6csRlNQ4Q7EG9LJUBDui4JsCCuY2BPLU1XOqT9zh4QyoYxmVOipsXbkT3EWR4oh5TUZvu2KEKDmzMMR9itMykV306gOdCK7Qggu4kybL8MCgYBnrLCZu4kYAb38OMcwALOyLja0t4YX4UxwL6R+2loRz9/EsZ3qe/1xcJMWVglZx51j/YB9gw87n+tYzKHy19lXD+GRJ/Gx9d6tqIua7baoZH6OwRP0Yzyw+tSTwheKm394ibrdihpQDEc78wQs440FH7go+gKrd2tJXANAsIsN+QKBgDL7L2XIqmpFaf7bvAENXCcHDiLa5GbnlqLcDwSGARc+kj2RzC4oXM0yi0dlQ8OmnynpLllgDJpvXEZOgCRTy7EUhWu+wVggF/HHU1pYHtctdneQbGFkeNTh7ARGByjIswl3WUAI0V56TQLtPQ/fWUjJ3BXEvcUCNUGhE2iL20AxAoGAQD56cxUgDyB5tgr1pfdeJSj+gWp/8TzY8vBAlv7hyBDO+NQ2tYDpiOgOQ6ko45yI819x5mbiJwOnq2yY7+yJXp3+nlXi9cvTuxRPfk0TsvKtdoWAR8C86qvowt6qom32Ra0cfNPTIeolmnMND9n51oNc0AtHLdfikp7O56v3FF4=" />
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

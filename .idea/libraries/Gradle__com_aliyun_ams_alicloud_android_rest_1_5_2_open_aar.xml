@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.aliyun.ams:alicloud-android-rest:1.5.2-open@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac02a25a07dc6918441432a25a7681ef/alicloud-android-rest-1.5.2-open/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac02a25a07dc6918441432a25a7681ef/alicloud-android-rest-1.5.2-open/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac02a25a07dc6918441432a25a7681ef/alicloud-android-rest-1.5.2-open/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

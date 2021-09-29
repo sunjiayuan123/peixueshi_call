@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.jess.arms.base.BaseApplication;
 import com.peixueshi.crm.app.utils.NetUtils;
 import com.mf.library.utils.Constant;
+import com.taobao.sophix.SophixManager;
 
 public class YuXueApplication extends BaseApplication {
     public static Context context;
@@ -17,6 +18,7 @@ public class YuXueApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         MultiDex.install(this);
+        SophixManager.getInstance().queryAndLoadNewPatch();//热修复
         context=getApplicationContext();
         Constant.context=context ;
         Log.d("YuxueApplication","启动了");

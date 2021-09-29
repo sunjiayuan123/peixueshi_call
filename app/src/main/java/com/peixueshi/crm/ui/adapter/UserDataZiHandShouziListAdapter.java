@@ -29,6 +29,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.peixueshi.crm.MainActivity;
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.DetailXiangqingActivity;
@@ -104,6 +105,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
     public static String localCallNumber;
     private int wp_id;
     private int oneShouZi;
+    private String xuePhone;
 
 
     @Override
@@ -899,7 +901,7 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
         }
         String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum+"&one="+oneShouZi;
       //  String endUrl = "c_id=" + c_id + "&p_id=" + p_id +  "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
-
+        xuePhone = callee;
      //   String endUrl = "u_id=" + u_id + "&u_name=" + emp_name + "&c_id=" + c_id + "&p_id=" + p_id + "&g_id=" + emp_team_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum;
         Log.e("tag", "APICallRequest: " + endUrl);
         //http://cx.chuxinjiaoyu.com/axb/zp
@@ -1000,7 +1002,48 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
         }
         return simNumber;
     }
+    private void requestCallpofs(int typ, String number) {
+        try {
 
+            String reqUrl = Constants.host + "user/callpofs?typ=" + typ + "&phone=" + number;
+
+            OkHttpUtils.get(null, reqUrl, new OkhttpCallback() {
+                @Override
+                public void onBefore() {
+                    super.onBefore();
+                }
+
+                @Override
+                public void onFailure(String message) {
+                    Toast.makeText(MainActivity.mainContext, message,
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onGetResult(Object object) {
+                }
+
+                @Override
+                public Object parseNetworkResponse(JSONObject object) throws
+                        Exception {
+                    if (object.getString("err") != null && object.getString("err").equals("0")) {
+                                /*if(Constants.qiniuToken != null){
+                                    MainActivity.initInfos(Constants.qiniuToken);
+                                }*/
+                        Log.d("OutGoingReceiver", "onCallStateChanged1: " + "通话记录");
+                    }
+                    return null;
+                }
+
+
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
 
     //根据上述情况，初始化UI和拨打电话，尤其注意sim2的打电话情况
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -1010,6 +1053,16 @@ public class UserDataZiHandShouziListAdapter extends BaseAdapter {
             Log.d(TAG, "callPhone: " + "no call phone permission");
             return;
         }
+        int type=1;
+        if (isShouZi) {//首咨
+            type = 2;
+        } else {     //库存
+            type = 1;
+        }
+        if (!TextUtils.isEmpty(xuePhone)){
+            requestCallpofs(type, xuePhone);
+        }
+
         checkIsCall(phoneNumber, isDualSim);
       /*  if (!isDualSim) {
             //单卡

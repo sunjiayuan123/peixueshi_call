@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.peixueshi.crm.MainActivity;
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.DetailXiangqingActivity;
@@ -106,6 +107,7 @@ public class UserDataZiListAdapter extends BaseAdapter {
     public static String localCallNumber;
     private int wp_id;
     private int oneShouZi;
+    private String xuePhone;
 
 
     @Override
@@ -626,7 +628,7 @@ public class UserDataZiListAdapter extends BaseAdapter {
             oneShouZi=0;
         }
         String endUrl = "c_id=" + c_id + "&p_id=" + p_id + "&a_num=" + a_num + "&b_num=" + callee + "&x_num=" + xnum+"&one="+oneShouZi;
-
+        xuePhone = callee;
         Log.e("tag", "APICallRequest: " + endUrl);
         okhttp3.OkHttpClient okHttpClient = new okhttp3.OkHttpClient();
         okhttp3.Request request = new okhttp3.Request.Builder()
@@ -943,7 +945,49 @@ public class UserDataZiListAdapter extends BaseAdapter {
         return simNumber;
     }
 
+    private void requestCallpofs(int typ, String number) {
+        try {
 
+            String reqUrl = Constants.host + "user/callpofs?typ=" + typ + "&phone=" + number;
+
+            OkHttpUtils.get(null, reqUrl, new OkhttpCallback() {
+                @Override
+                public void onBefore() {
+                    super.onBefore();
+                }
+
+                @Override
+                public void onFailure(String message) {
+                    Toast.makeText(MainActivity.mainContext, message,
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onGetResult(Object object) {
+                }
+
+                @Override
+                public Object parseNetworkResponse(JSONObject object) throws
+                        Exception {
+                    Log.e("tag", "parseNetworkResponse: "+object.toString() );
+                    if (object.getString("err") != null && object.getString("err").equals("0")) {
+                                /*if(Constants.qiniuToken != null){
+                                    MainActivity.initInfos(Constants.qiniuToken);
+                                }*/
+                        Log.d("OutGoingReceiver", "onCallStateChanged1: " + "通话记录");
+                    }
+                    return null;
+                }
+
+
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
     //根据上述情况，初始化UI和拨打电话，尤其注意sim2的打电话情况
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void callPhone(boolean isDualSim, String phoneNumber) {
@@ -951,6 +995,15 @@ public class UserDataZiListAdapter extends BaseAdapter {
             Toast.makeText(activity, "no call phone permission", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "callPhone: " + "no call phone permission");
             return;
+        }
+        int type=1;
+        if (isShouZi) {//首咨
+            type = 2;
+        } else {     //库存
+            type = 1;
+        }
+        if (!TextUtils.isEmpty(xuePhone)){
+            requestCallpofs(type, xuePhone);
         }
 
         checkIsCall(phoneNumber, isDualSim);//卡呼叫

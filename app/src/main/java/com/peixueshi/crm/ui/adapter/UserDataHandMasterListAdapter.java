@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.peixueshi.crm.MainActivity;
 import com.peixueshi.crm.R;
 import com.peixueshi.crm.activity.DetailBeizhuActivity;
 import com.peixueshi.crm.activity.MineZhongHistoryActivity;
@@ -286,6 +287,49 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
         lastClickTime = currentClickTime;
         return flag;
     }
+    private void requestCallpofs(int typ, String number) {
+        try {
+
+            String reqUrl = Constants.host + "user/callpofs?typ=" + typ + "&phone=" + number;
+
+            OkHttpUtils.get(null, reqUrl, new OkhttpCallback() {
+                @Override
+                public void onBefore() {
+                    super.onBefore();
+                }
+
+                @Override
+                public void onFailure(String message) {
+                    Toast.makeText(MainActivity.mainContext, message,
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onGetResult(Object object) {
+                }
+
+                @Override
+                public Object parseNetworkResponse(JSONObject object) throws
+                        Exception {
+                    if (object.getString("err") != null && object.getString("err").equals("0")) {
+                                /*if(Constants.qiniuToken != null){
+                                    MainActivity.initInfos(Constants.qiniuToken);
+                                }*/
+                        Log.d("OutGoingReceiver", "onCallStateChanged1: " + "通话记录");
+                    }
+                    return null;
+                }
+
+
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
+
     /**
      * 备注
      *
@@ -926,6 +970,13 @@ public class UserDataHandMasterListAdapter extends BaseAdapter {
             Log.d(TAG, "callPhone: " + "no call phone permission");
             return;
         }
+      /*  int type=1;
+        if (isShouZi) {//首咨
+            type = 2;
+        } else {     //库存
+            type = 1;
+        }
+        requestCallpofs(type, phoneNumber);*/
         checkIsCall(phoneNumber, isDualSim);
       /*  if (!isDualSim) {
             //单卡

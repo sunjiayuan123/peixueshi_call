@@ -32,11 +32,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92c58e9-87b2-43cd-90f1-55b148e8fcd0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCallFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/fragment/MainCallFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aliyun_ams_alicloud_android_hotfix_3_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aliyun_ams_alicloud_android_logger_1_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aliyun_ams_alicloud_android_rest_1_5_2_open_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aliyun_ams_alicloud_android_sender_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aliyun_ams_alicloud_android_utdid_2_5_1_proguard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/android_call_peixueshi.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/android_call_peixueshi.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/YuXueApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/YuXueApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataHandMasterListAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiHandShouziListAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/peixueshi/crm/ui/adapter/UserDataZiListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_call.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_call.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release/pxscrm.apk" beforeDir="false" afterPath="$PROJECT_DIR$/release/pxscrm.apk" afterDir="false" />
     </list>
     <list id="4acbadf7-57fe-44a8-a3d7-d9bbafd39e63" name="Revert &quot;//jgm&quot;" comment="Revert &quot;//jgm&quot;&#10;&#10;This reverts commit fcc5851c" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,22 +102,22 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\java\com\peixueshi\crm\ui\adapter" />
-      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\java\com\peixueshi\crm\activity" />
-      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\layout" />
-      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xhdpi" />
-      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xxhdpi" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.peixueshi.crm.utils" />
-      <recent name="com.peixueshi.crm.fragment" />
-      <recent name="com.peixueshi.crm.bean" />
-      <recent name="com.peixueshi.crm.activity" />
-      <recent name="com.peixueshi.crm.ui.adapter" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\android\yuxue\android_call_qiliang\app\src\main\res\drawable-xhdpi" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.peixueshi.crm" />
+      <recent name="com.peixueshi.crm.fragment" />
+      <recent name="com.peixueshi.crm.utils" />
+      <recent name="com.peixueshi.crm.bean" />
+      <recent name="com.peixueshi.crm.activity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\layout" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\java\com\peixueshi\crm\ui\adapter" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\java\com\peixueshi\crm\activity" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xhdpi" />
+      <recent name="D:\android\yuxue\android_call_peixueshi\app\src\main\res\drawable-xxhdpi" />
     </key>
   </component>
   <component name="RunManager">
@@ -213,10 +236,11 @@
     </state>
     <state width="1493" height="286" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1630376724189" />
     <state width="1493" height="236" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1631850503479" />
-    <state x="329" y="113" width="894" height="560" key="find.popup" timestamp="1631258921954">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="329" y="114" width="894" height="567" key="find.popup" timestamp="1632386286305">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="329" y="113" width="894" height="560" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1631258921954" />
+    <state x="329" y="114" width="894" height="567" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1632386286305" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
