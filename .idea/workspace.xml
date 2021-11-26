@@ -31,13 +31,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c92c58e9-87b2-43cd-90f1-55b148e8fcd0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/config.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/pxscrm.apk" beforeDir="false" afterPath="$PROJECT_DIR$/release/pxscrm.apk" afterDir="false" />
-    </list>
+    <list default="true" id="c92c58e9-87b2-43cd-90f1-55b148e8fcd0" name="Default Changelist" comment="" />
     <list id="4acbadf7-57fe-44a8-a3d7-d9bbafd39e63" name="Revert &quot;//jgm&quot;" comment="Revert &quot;//jgm&quot;&#10;&#10;This reverts commit fcc5851c" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
